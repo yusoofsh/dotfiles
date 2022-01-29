@@ -1,0 +1,66 @@
+# command_timeout = "99999999"
+
+# format = """
+# $username\
+# $hostname\
+# $directory\
+# $git_branch\
+# $git_state\
+# $git_status\
+# $cmd_duration\
+# $line_break\
+# $character
+# """
+
+[character]
+success_symbol = "[❯](bold #f8f8f2)"
+error_symbol = "[❯](bold #ff5555)"
+
+[cmd_duration]
+style = "bold #f1fa8c"
+
+[dart]
+format = "via [$symbol ($version)]($style) "
+symbol = ""
+
+[directory]
+style = "bold #50fa7b"
+
+[git_branch]
+format = "[$symbol ($branch)]($style)"
+style = "bold #ff79c6"
+symbol = ""
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "bold #ff5555"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[hostname]
+style = "bold #ff5555"
+
+[nodejs]
+format = "via [$symbol ($version)]($style) "
+symbol = ""
+
+[package]
+format = "is [$symbol ($version)]($style) "
+symbol = ""
+
+[rust]
+format = "via [$symbol ($version)]($style) "
+symbol = ""
+
+[username]
+format = "[$user]($style) on "
+style_user = "bold #bd93f9"
