@@ -29,10 +29,10 @@ export STARSHIP_CONFIG="/Users/yusoofsh/.config/starship/config.toml"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export EDITOR="code --wait"
 export VISUAL="code --wait"
-export ENHANCD_FILTER="sk --reverse --height 20% --preview 'exa --tree --group-directories-first --level 1 {}'"
+export ENHANCD_FILTER="fzf --reverse --height 20% --preview 'exa --tree --group-directories-first --level 1 {}'"
 export ENHANCD_USE_ABBREV="true"
 
-alias fzf="sk"
+alias z="cd"
 alias c="clear"
 alias pn="pnpm"
 alias cat="bat"
@@ -44,27 +44,29 @@ alias python="python3"
 
 alias man="man $argv 2> /dev/null"
 alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
-alias up="brew update; brew upgrade; brew autoremove; echo '\n'; tea --sync; echo '\n'; zprezto-update; tldr -u"
+alias up="brew update; brew upgrade"
+
+# Lines configured by zsh-newuser-install
+HISTSIZE=100000
+SAVEHIST=100000
+
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/yusoofsh/.zshrc'
+autoload -Uz compinit
+compinit
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-
 source "$HOME/.enhancd/init.sh"
-source "$HOME/.hishtory/config.zsh"
-
-source <(tea --magic --silent)
 
 [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
 [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
-
 [ "$TERM_PROGRAM" != "WarpTerminal" ] && eval "$(atuin init zsh)"
 
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
 eval "$(jenv init -)"
 
 setopt MENU_COMPLETE
-setopt nocorrect
+# setopt nocorrect
 
 # pnpm setup
 export PNPM_HOME="/Users/yusoofsh/Library/pnpm"
