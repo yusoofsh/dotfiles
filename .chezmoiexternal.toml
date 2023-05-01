@@ -10,3 +10,8 @@ args = [
 args = [
 	"--recurse-submodules",
 ]
+
+[".enhancd"]
+type = "git-repo"
+url = "https://github.com/b4b4r07/enhancd.git"
+refreshPeriod = "168h"
