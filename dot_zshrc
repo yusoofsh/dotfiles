@@ -27,7 +27,6 @@ export PATH="$CARGOPATH/bin:$PATH"
 
 export STARSHIP_CONFIG="/Users/yusoofsh/.config/starship/config.toml"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
-export EDITOR="code --wait"
 export VISUAL="code --wait"
 export ENHANCD_FILTER="fzf --reverse --height 20% --preview 'exa --tree --group-directories-first --level 1 {}'"
 export ENHANCD_USE_ABBREV="true"
