@@ -1,8 +1,0 @@
-package cd
-package git-flow
-package https://github.com/Gazorby/fish-abbreviation-tips
-package https://github.com/dracula/fish
-package https://github.com/franciscolourenco/done
-package https://github.com/jorgebucaran/autopair.fish
-package https://github.com/jorgebucaran/replay.fish
-theme default
