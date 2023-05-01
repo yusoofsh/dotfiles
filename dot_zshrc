@@ -1,0 +1,90 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/libressl/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm@13/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/swift/bin:$PATH"
+export PATH="/opt/homebrew/opt/zip/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+
+export PATH="/Users/yusoofsh/.bin:$PATH"
+export PATH="/Users/yusoofsh/.hishtory:$PATH"
+
+export PATH="/Users/yusoofsh/Library/Android/SDK/cmdline-tools/latest/bin:$PATH"
+export PATH="/Users/yusoofsh/Library/Android/SDK/platform-tools:$PATH"
+export PATH="/Users/yusoofsh/Library/Android/SDK/tools:$PATH"
+
+export JENV_ROOT="$HOME/.jenv"
+export PATH="$JENV_ROOT/bin:$PATH"
+export PUB_CACHE="$HOME/.pub-cache"
+export PATH="$PUB_CACHE/bin:$PATH"
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH"
+export CARGOPATH="$HOME/.cargo"
+export PATH="$CARGOPATH/bin:$PATH"
+
+export STARSHIP_CONFIG="/Users/yusoofsh/.config/starship/config.toml"
+export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+export EDITOR="code --wait"
+export VISUAL="code --wait"
+export ENHANCD_FILTER="sk --reverse --height 20% --preview 'exa --tree --group-directories-first --level 1 {}'"
+export ENHANCD_USE_ABBREV="true"
+
+alias fzf="sk"
+alias c="clear"
+alias pn="pnpm"
+alias cat="bat"
+alias find="fd"
+alias vim="nvim"
+alias dig="doggo"
+alias ping="gping"
+alias python="python3"
+
+alias man="man $argv 2> /dev/null"
+alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
+alias up="brew update; brew upgrade; brew autoremove; echo '\n'; tea --sync; echo '\n'; zprezto-update; tldr -u"
+
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+source "$HOME/.enhancd/init.sh"
+source "$HOME/.hishtory/config.zsh"
+
+source <(tea --magic --silent)
+
+[ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
+[ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
+
+[ "$TERM_PROGRAM" != "WarpTerminal" ] && eval "$(atuin init zsh)"
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+eval "$(jenv init -)"
+
+setopt MENU_COMPLETE
+setopt nocorrect
+
+# pnpm setup
+export PNPM_HOME="/Users/yusoofsh/Library/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# Contents within this block are managed by 'conda init'
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
