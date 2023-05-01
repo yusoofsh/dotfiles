@@ -43,7 +43,7 @@ alias python="python3"
 
 alias man="man $argv 2> /dev/null"
 alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
-alias up="brew update; brew upgrade"
+alias up="brew update; brew upgrade; brew autoremove; brew bundle dump --global --describe --force; echo \n; chezmoi re-add; chezmoi update"
 
 # Lines configured by zsh-newuser-install
 HISTSIZE=100000
