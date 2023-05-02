@@ -75,6 +75,8 @@ brew "python@3.10"
 brew "git-filter-repo"
 # AVH edition of git-flow
 brew "git-flow-avh"
+# Git extension for versioning large files
+brew "git-lfs"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Ping, but with a graph
@@ -248,7 +250,6 @@ mas "Shareful", id: 1522267256
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "Termius", id: 1176074088
-mas "TestFlight", id: 899247664
 mas "Today", id: 6443714928
 mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
