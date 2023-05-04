@@ -25,6 +25,7 @@ export PATH="$GOPATH/bin:$PATH"
 export CARGOPATH="$HOME/.cargo"
 export PATH="$CARGOPATH/bin:$PATH"
 
+export HOMEBREW_UNINSTALL_DEPENDENCIES=1
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export ENHANCD_FILTER="fzf --reverse --height 20% --preview 'exa --tree --group-directories-first --level 1 {}'"
@@ -58,9 +59,10 @@ source "$HOME/.enhancd/init.sh"
 
 [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
 [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
-[ "$TERM_PROGRAM" != "WarpTerminal" ] && eval "$(atuin init zsh)"
+# [ "$TERM_PROGRAM" != "WarpTerminal" ] &&
 
 eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
 eval "$(jenv init -)"
 
 setopt MENU_COMPLETE
