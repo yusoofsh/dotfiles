@@ -50,7 +50,7 @@ HISTSIZE=100000
 SAVEHIST=100000
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '$HOME/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
