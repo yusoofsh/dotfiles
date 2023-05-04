@@ -9,12 +9,12 @@ export PATH="/opt/homebrew/opt/swift/bin:$PATH"
 export PATH="/opt/homebrew/opt/zip/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
-export PATH="/Users/yusoofsh/.bin:$PATH"
-export PATH="/Users/yusoofsh/.hishtory:$PATH"
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.hishtory:$PATH"
 
-export PATH="/Users/yusoofsh/Library/Android/SDK/cmdline-tools/latest/bin:$PATH"
-export PATH="/Users/yusoofsh/Library/Android/SDK/platform-tools:$PATH"
-export PATH="/Users/yusoofsh/Library/Android/SDK/tools:$PATH"
+export PATH="$HOME/Library/Android/SDK/cmdline-tools/latest/bin:$PATH"
+export PATH="$HOME/Library/Android/SDK/platform-tools:$PATH"
+export PATH="$HOME/Library/Android/SDK/tools:$PATH"
 
 export JENV_ROOT="$HOME/.jenv"
 export PATH="$JENV_ROOT/bin:$PATH"
@@ -25,7 +25,7 @@ export PATH="$GOPATH/bin:$PATH"
 export CARGOPATH="$HOME/.cargo"
 export PATH="$CARGOPATH/bin:$PATH"
 
-export STARSHIP_CONFIG="/Users/yusoofsh/.config/starship/config.toml"
+export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export VISUAL="code --wait"
 export ENHANCD_FILTER="fzf --reverse --height 20% --preview 'exa --tree --group-directories-first --level 1 {}'"
@@ -43,14 +43,14 @@ alias python="python3"
 
 alias man="man $argv 2> /dev/null"
 alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
-alias up="brew bundle dump --global --describe --force; brew bundle install --global --no-lock; chezmoi re-add; chezmoi update"
+alias up="brew bundle dump --global --describe --force; chezmoi re-add; chezmoi update"
 
 # Lines configured by zsh-newuser-install
 HISTSIZE=100000
 SAVEHIST=100000
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/yusoofsh/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit
 
@@ -67,8 +67,11 @@ eval "$(jenv init -)"
 setopt MENU_COMPLETE
 # setopt nocorrect
 
-# pnpm setup
-export PNPM_HOME="/Users/yusoofsh/Library/pnpm"
+# Use Secretive for SSH Agent
+export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"=
+
+# PNPM setup
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
