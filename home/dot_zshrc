@@ -39,6 +39,7 @@ alias find="fd"
 alias vim="nvim"
 alias dig="doggo"
 alias ping="gping"
+alias nano="micro"
 alias python="python3"
 
 alias man="man $argv 2> /dev/null"
