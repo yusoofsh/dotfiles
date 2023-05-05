@@ -99,6 +99,8 @@ brew "macos-trash"
 brew "make"
 # Mac App Store command-line interface
 brew "mas"
+# Modern and intuitive terminal-based text editor
+brew "micro"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
