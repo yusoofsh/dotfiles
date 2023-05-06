@@ -113,6 +113,8 @@ brew "pkg-config"
 brew "protobuf"
 # Monitor data's progress through a pipe
 brew "pv"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
 # Cross-shell prompt for astronauts

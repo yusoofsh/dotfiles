@@ -31,21 +31,6 @@ export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export ENHANCD_FILTER="fzf --reverse --height 20% --preview 'exa --tree --group-directories-first --level 1 {}'"
 export ENHANCD_USE_ABBREV="true"
 
-alias z="cd"
-alias c="clear"
-alias pn="pnpm"
-alias cat="bat"
-alias find="fd"
-alias vim="nvim"
-alias dig="doggo"
-alias ping="gping"
-alias nano="micro"
-alias python="python3"
-
-alias man="man $argv 2> /dev/null"
-alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
-alias up="./up.sh"
-
 # Lines configured by zsh-newuser-install
 HISTSIZE=100000
 SAVEHIST=100000
@@ -91,6 +76,22 @@ else
     fi
 fi
 unset __conda_setup
+
+alias z="cd"
+alias c="clear"
+alias pn="pnpm"
+alias cat="bat"
+alias find="fd"
+alias grep="rg"
+alias vim="nvim"
+alias dig="doggo"
+alias ping="gping"
+alias nano="micro"
+alias python="python3"
+
+alias man="man $argv 2> /dev/null"
+alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
+alias up="./up.sh"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
