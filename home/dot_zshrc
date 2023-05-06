@@ -43,7 +43,6 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
 [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
-# [ "$TERM_PROGRAM" != "WarpTerminal" ] &&
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
@@ -56,7 +55,7 @@ setopt MENU_COMPLETE
 # Use Secretive for SSH Agent
 export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
 
-# PNPM setup
+# PNPM Setup
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
@@ -76,8 +75,7 @@ else
 fi
 unset __conda_setup
 
-alias z="zi"
-alias cd="zi"
+alias cd="z"
 alias c="clear"
 alias pn="pnpm"
 alias cat="bat"
