@@ -12,21 +12,6 @@
 		"recipient": "B46E6981",
 		"args": ["--quiet"]
 	},
-	"merge": {
-		"command": "code",
-		"args": [
-			"--wait",
-			"--merge",
-			"{{ .Destination }}",
-			"{{ .Source }}",
-			"{{ .Target }}"
-		]
-	},
-	"diff": {
-		"exclude": ["scripts"],
-		"command": "code",
-		"args": ["--wait", "--diff", "{{ .Destination }}", "{{ .Target }}"]
-	},
 	"edit": {
 		"command": "code",
 		"args": ["--wait"]
