@@ -44,7 +44,7 @@ alias python="python3"
 
 alias man="man $argv 2> /dev/null"
 alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
-alias up=""
+alias up="./up.sh"
 
 # Lines configured by zsh-newuser-install
 HISTSIZE=100000
