@@ -15,7 +15,7 @@ command -v chezmoi >/dev/null 2>&1 ||
 	(echo '👊  Installing chezmoi' && brew install chezmoi)
 
 # Initialize dotfiles
-(echo '🚀  Initializing dotfiles' && chezmoi init yusoofsh --apply --verbose)
+(echo '🚀  Initializing dotfiles' && chezmoi init yusoofsh --apply --verbose --source "/Users/yusoofsh/Documents/Division/Open/Code/yusoofsh/dotfiles")
 
 echo ""
 echo "✅  Done."
