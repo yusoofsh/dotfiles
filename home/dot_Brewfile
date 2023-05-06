@@ -117,8 +117,6 @@ brew "pv"
 brew "rust"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Easiest, most secure way to use WireGuard and 2FA
-brew "tailscale"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
 # User interface to the TELNET protocol
