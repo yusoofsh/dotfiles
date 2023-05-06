@@ -1,0 +1,34 @@
+{
+	"sourceDir": "/Users/yusoofsh/Documents/Division/Open/Code/yusoofsh/dotfiles",
+	"encryption": "gpg",
+	"git": {
+		"autoCommit": true,
+		"autoPush": true
+	},
+	"status": {
+		"exclude": ["scripts"]
+	},
+	"gpg": {
+		"recipient": "B46E6981",
+		"args": ["--quiet"]
+	},
+	"merge": {
+		"command": "code",
+		"args": [
+			"--wait",
+			"--merge",
+			"{{ .Destination }}",
+			"{{ .Source }}",
+			"{{ .Target }}"
+		]
+	},
+	"diff": {
+		"exclude": ["scripts"],
+		"command": "code",
+		"args": ["--wait", "--diff", "{{ .Destination }}", "{{ .Target }}"]
+	},
+	"edit": {
+		"command": "code",
+		"args": ["--wait"]
+	}
+}
