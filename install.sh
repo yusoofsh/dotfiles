@@ -18,7 +18,7 @@ command -v chezmoi >/dev/null 2>&1 ||
 
 # Initialize dotfiles
 echo ""
-(echo '🚀  Initializing dotfiles' && chezmoi init yusoofsh --apply --verbose)
+(echo '🚀  Initializing dotfiles' && chezmoi init --apply --verbose yusoofsh)
 
 echo ""
 echo "✅  Done."
