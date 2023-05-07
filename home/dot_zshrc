@@ -85,11 +85,12 @@ alias vim="nvim"
 alias dig="doggo"
 alias ping="gping"
 alias nano="micro"
+alias curl="curlie"
 alias python="python3"
 
 alias man="man $argv 2> /dev/null"
 alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
-alias up="./up.sh"
+alias up="$HOME/up.sh"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
