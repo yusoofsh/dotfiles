@@ -27,16 +27,20 @@ brew "chezmoi"
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
+# Perl compatible regular expressions library with a new API
+brew "pcre2"
+# GNU multiple precision arithmetic library
+brew "gmp"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
 # Platform built on V8 to build network applications
 brew "node"
 # Package acting as bridge between Node projects and their package managers
 brew "corepack"
-# GNU multiple precision arithmetic library
-brew "gmp"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# GNU internationalization (i18n) and localization (l10n) library
-brew "gettext"
 # Open source suite of directory software
 brew "openldap"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -45,6 +49,8 @@ brew "curl"
 brew "curlie"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Command-line DNS Client for Humans
 brew "doggo"
 # Select default apps for documents and URL schemes on macOS
@@ -65,8 +71,6 @@ brew "unixodbc"
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
-# Perl compatible regular expressions library with a new API
-brew "pcre2"
 # Distributed revision control system
 brew "git"
 # Interpreted, interactive, object-oriented programming language
@@ -105,8 +109,6 @@ brew "micro"
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# OpenBSD freely-licensed SSH connectivity tools
-brew "openssh"
 # General-purpose scripting language
 brew "php"
 # Manage compile and link flags for libraries
@@ -153,6 +155,8 @@ cask "android-studio"
 cask "betterdisplay"
 # Hardware benchmarking utility
 cask "cinebench"
+# Free app that makes your Internet safer
+cask "cloudflare-warp"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
 # Developer platform
