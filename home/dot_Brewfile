@@ -155,8 +155,6 @@ cask "android-studio"
 cask "betterdisplay"
 # Hardware benchmarking utility
 cask "cinebench"
-# Free app that makes your Internet safer
-cask "cloudflare-warp"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
 # Developer platform
@@ -204,6 +202,8 @@ cask "microsoft-teams"
 cask "miniconda"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos"
+# MikroTik Winbox
+cask "nrlquaker-winbox"
 # Calculator and converter application
 cask "numi"
 # Verify system files structure, run miscellaneous maintenance and more
@@ -226,6 +226,8 @@ cask "spotify"
 cask "steam"
 # Replacement for RCDefaultApps, written in Swift
 cask "swiftdefaultappsprefpane"
+# Mesh VPN based on Wireguard
+cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
 # Utility to change the default backup interval of Time Machine
