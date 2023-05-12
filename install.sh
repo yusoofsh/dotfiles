@@ -4,6 +4,7 @@ set -eufo pipefail
 
 echo ""
 echo "🤚 This script will setup .dotfiles for you."
+echo "💬 Ensure you have imported the GPG private key to decrypt the files."
 read -n 1 -r -s -p $'\n    Press any key to continue or Ctrl+C to abort...\n'
 
 # Check if Homebrew is installed, if not install it
