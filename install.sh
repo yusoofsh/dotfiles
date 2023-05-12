@@ -37,11 +37,11 @@ if ! command -v brew &>/dev/null; then
             echo "❌ Cannot determine Linux distribution"
             exit 1
         fi
+    else
+        echo ""
+        echo "❌ Unsupported system"
+        exit 1
     fi
-else
-    echo ""
-    echo "❌ Unsupported system"
-    exit 1
 fi
 
 # Check if chezmoi is installed, if not install it
