@@ -44,9 +44,6 @@ else
     exit 1
 fi
 
-# Use brew for these packages
-brew install gcc git curl
-
 # Check if chezmoi is installed, if not install it
 if ! command -v chezmoi &>/dev/null; then
     echo ""
