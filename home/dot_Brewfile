@@ -191,8 +191,6 @@ cask "iina"
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
-# Software for Logitech devices
-cask "logi-options-plus"
 # Clipboard manager
 cask "maccy"
 # File system integration
@@ -231,8 +229,6 @@ cask "swiftdefaultappsprefpane"
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
-# Utility to change the default backup interval of Time Machine
-cask "timemachineeditor"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
