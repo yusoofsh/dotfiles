@@ -229,6 +229,8 @@ cask "swiftdefaultappsprefpane"
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
+# Utility to change the default backup interval of Time Machine
+cask "timemachineeditor"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
