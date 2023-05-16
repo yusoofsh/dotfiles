@@ -11,10 +11,6 @@ tap "oven-sh/bun"
 tap "shivammathur/php"
 # Mozilla CA certificate store
 brew "ca-certificates"
-# Platform built on V8 to build network applications
-brew "node"
-# Writes your git commit messages for you with AI
-brew "aicommits"
 # Improved shell history for zsh and bash
 brew "atuin"
 # Automatic configure script builder
@@ -41,6 +37,8 @@ brew "pcre2"
 brew "gmp"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# Platform built on V8 to build network applications
+brew "node"
 # Package acting as bridge between Node projects and their package managers
 brew "corepack"
 # GNU File, Shell, and Text utilities
@@ -55,6 +53,8 @@ brew "curlie"
 brew "deno"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
 # Command-line DNS Client for Humans
 brew "doggo"
 # Select default apps for documents and URL schemes on macOS
@@ -125,6 +125,8 @@ brew "ripgrep"
 brew "rust"
 # Cross-shell prompt for astronauts
 brew "starship"
+# High-performance system programming language
+brew "swift"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
 # User interface to the TELNET protocol

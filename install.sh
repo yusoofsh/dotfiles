@@ -7,55 +7,36 @@ echo "🤚 This script will setup .dotfiles for you."
 echo "💬 Ensure you have imported the GPG private key to decrypt the files."
 read -n 1 -r -s -p $'\n    Press any key to continue or Ctrl+C to abort...\n'
 
-# Check if Homebrew is installed, if not install it
-if ! command -v brew &>/dev/null; then
-    echo ""
-    echo "🍺 Installing Homebrew and it's dependencies"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    if [[ $(uname -s) == "Darwin" ]]; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-    elif [[ $(uname -s) == "Linux" ]]; then
-        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-        if [[ -f /etc/os-release ]]; then
-            source /etc/os-release
-            if [[ $ID == "ubuntu" ]]; then
-                echo ""
-                echo "📦 Installing packages for Ubuntu"
-                sudo apt-get update
-                sudo apt-get install -y build-essential procps curl file git
-            elif [[ $ID == "fedora" ]]; then
-                echo ""
-                echo "📦 Installing packages for Fedora"
-                sudo dnf groupinstall -y 'Development Tools'
-                sudo dnf install -y procps-ng curl file git
-            else
-                echo ""
-                echo "❌ Unsupported Linux distribution"
-                exit 1
-            fi
-        else
-            echo ""
-            echo "❌ Cannot determine Linux distribution"
-            exit 1
-        fi
-    else
+if [[ $(uname -s) == "Darwin" ]]; then
+    # Check if Homebrew is installed, if not install it
+    if ! command -v brew &>/dev/null; then
         echo ""
-        echo "❌ Unsupported system"
-        exit 1
+        echo "🍺 Installing Homebrew and it's dependencies"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        eval "$(/opt/homebrew/bin/brew shellenv)"
     fi
-fi
 
-# Check if chezmoi is installed, if not install it
-if ! command -v chezmoi &>/dev/null; then
+    # Check if chezmoi is installed, if not install it
+    if ! command -v chezmoi &>/dev/null; then
+        echo ""
+        echo "� Installing chezmoi"
+        brew install chezmoi
+    fi
+
+    # Initialize dotfiles
     echo ""
-    echo "👊 Installing chezmoi"
-    brew install chezmoi
-fi
+    echo "🚀 Initializing dotfiles"
+    chezmoi init --apply --verbose yusoofsh
 
-# Initialize dotfiles
-echo ""
-echo "🚀 Initializing dotfiles"
-chezmoi init --apply --verbose yusoofsh
+elif [[ $(uname -s) == "Linux" ]]; then
+    # Initialize dotfiles
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply yusoofsh
+
+else
+    echo ""
+    echo "❌ Unsupported system"
+
+fi
 
 echo ""
 echo "✅ Done."

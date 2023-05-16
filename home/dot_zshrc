@@ -1,28 +1,8 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    export HOMEBREW="/opt/homebrew"
-fi
-
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    export HOMEBREW="/home/linuxbrew/.linuxbrew"
-fi
-
-export PATH="$HOMEBREW/opt/curl/bin:$PATH"
-export PATH="$HOMEBREW/opt/libressl/bin:$PATH"
-export PATH="$HOMEBREW/opt/llvm@13/bin:$PATH"
-export PATH="$HOMEBREW/opt/ruby/bin:$PATH"
-export PATH="$HOMEBREW/opt/swift/bin:$PATH"
-export PATH="$HOMEBREW/opt/zip/bin:$PATH"
-export PATH="$HOMEBREW/sbin:$PATH"
-
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.hishtory:$PATH"
-
-export PATH="$HOME/Library/Android/SDK/cmdline-tools/latest/bin:$PATH"
-export PATH="$HOME/Library/Android/SDK/platform-tools:$PATH"
-export PATH="$HOME/Library/Android/SDK/tools:$PATH"
 
 export JENV_ROOT="$HOME/.jenv"
 export PATH="$JENV_ROOT/bin:$PATH"
@@ -33,9 +13,7 @@ export PATH="$GOPATH/bin:$PATH"
 export CARGOPATH="$HOME/.cargo"
 export PATH="$CARGOPATH/bin:$PATH"
 
-export HOMEBREW_UNINSTALL_DEPENDENCIES=1
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
-export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export _ZO_FZF_OPTS="--reverse --border --height 40%"
 
 # Lines configured by zsh-newuser-install
@@ -49,10 +27,49 @@ compinit
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
-[ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
-[ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH="/opt/homebrew/sbin:$PATH"
+    export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+    export PATH="/opt/homebrew/opt/libressl/bin:$PATH"
+    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+    export PATH="/opt/homebrew/opt/swift/bin:$PATH"
+    export PATH="/opt/homebrew/opt/zip/bin:$PATH"
 
-eval "$($HOMEBREW/bin/brew shellenv)"
+    export PATH="$HOME/Library/Android/SDK/cmdline-tools/latest/bin:$PATH"
+    export PATH="$HOME/Library/Android/SDK/platform-tools:$PATH"
+    export PATH="$HOME/Library/Android/SDK/tools:$PATH"
+
+    export HOMEBREW_UNINSTALL_DEPENDENCIES=1
+    export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+    export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
+
+    [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
+    [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
+
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    # PNPM Setup
+    export PNPM_HOME="$HOME/Library/pnpm"
+    case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+    esac
+
+    # Contents within this block are managed by 'conda init'
+    __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+            . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+        else
+            export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+
+fi
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
@@ -60,29 +77,6 @@ eval "$(jenv init -)"
 
 setopt MENU_COMPLETE
 # setopt nocorrect
-
-# Use Secretive for SSH Agent
-export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
-
-# PNPM Setup
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-# Contents within this block are managed by 'conda init'
-__conda_setup="$('$HOMEBREW/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOMEBREW/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "$HOMEBREW/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOMEBREW/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
 
 alias cd="z"
 alias c="clear"
