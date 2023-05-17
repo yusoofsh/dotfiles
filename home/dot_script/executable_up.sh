@@ -1,20 +1,20 @@
 #!/opt/homebrew/bin/zsh
 
-# Update macOS system software
 echo ""
+echo "Updating macOS system software"
 softwareupdate -ia
 
-# Update Mac App Store apps
 echo ""
+echo "Updating Mac App Store apps"
 mas upgrade
 
-# Update Homebrew
 echo ""
+echo "Updating Homebrew and installed packages"
 brew update
 brew upgrade
 
-# Sync dotfiles and installed apps
 echo ""
+echo "Sync dotfiles and installed apps"
 brew bundle dump --global --describe --force
 chezmoi re-add
 chezmoi update
