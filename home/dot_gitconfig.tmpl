@@ -42,8 +42,8 @@
 	autoDetectTimeout = 500
 	guiPrompt = false
 	cacheOptions = --timeout 1200
-	helper =
-	helper = /usr/local/bin/git-credential-manager
+	{{ if eq .chezmoi.os "darwin" }}helper =
+	helper = /usr/local/bin/git-credential-manager{{ else if eq .chezmoi.os "linux" }}helper ={{ end }}
 
 [diff]
 	mnemonicPrefix = true
@@ -77,7 +77,7 @@
 	versiontag = v
 
 [gpg]
-	program = /usr/local/bin/gpg
+	{{ if eq .chezmoi.os "darwin" }}program = /usr/local/bin/gpg{{ else if eq .chezmoi.os "linux" }}program = /usr/bin/gpg{{ end }}
 
 [grep]
 	break = true
