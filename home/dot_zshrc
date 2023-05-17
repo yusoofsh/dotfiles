@@ -67,6 +67,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     fi
     unset __conda_setup
 
+elif [[ "$OSTYPE" == "linux"* ]]; then
+    export PATH="$HOME/.dotnet/tools:$PATH"
+
 fi
 
 eval "$(starship init zsh)"
