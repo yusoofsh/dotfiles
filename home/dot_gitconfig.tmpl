@@ -43,7 +43,8 @@
 	guiPrompt = false
 	cacheOptions = --timeout 1200
 	{{ if eq .chezmoi.os "darwin" }}helper =
-	helper = /usr/local/bin/git-credential-manager{{ else if eq .chezmoi.os "linux" }}helper ={{ end }}
+	helper = /usr/local/bin/git-credential-manager{{ else if eq .chezmoi.os "linux" }}helper =
+	helper = ~/.dotnet/tools/git-credential-manager{{ end }}
 
 [diff]
 	mnemonicPrefix = true
