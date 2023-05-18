@@ -10,7 +10,9 @@ if [[ ("$SHLVL" -eq 1 && ! -o LOGIN) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; the
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-{{ if eq .chezmoi.os "linux" }}# Added by Nix installer
+{{- if eq .chezmoi.os "linux" -}}
+# Added by Nix installer
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh
-fi{{ end }}
+fi
+{{- end }}
