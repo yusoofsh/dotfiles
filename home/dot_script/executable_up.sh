@@ -1,10 +1,6 @@
 #!/opt/homebrew/bin/zsh
 
 echo ""
-echo "Updating macOS system software"
-softwareupdate -ia
-
-echo ""
 echo "Updating Mac App Store apps"
 mas upgrade
 
