@@ -5,7 +5,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "microsoft/git"
 tap "nextdns/tap"
 tap "oven-sh/bun"
 tap "shivammathur/php"
@@ -153,6 +152,8 @@ brew "nextdns/tap/nextdns"
 brew "oven-sh/bun/bun"
 # General-purpose scripting language
 brew "shivammathur/php/php@7.4", link: true
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Enable Windows-like alt-tab
@@ -179,7 +180,6 @@ cask "font-inconsolata"
 cask "font-inter"
 # Monospaced font with cursive italics and programming symbol ligatures
 cask "font-victor-mono"
-cask "git-credential-manager-core"
 # Tools to protect your files
 cask "gpg-suite-no-mail"
 # Grammarly for desktop
@@ -240,6 +240,7 @@ cask "xquartz"
 cask "zoom"
 # OpenJDK distribution from Azul
 cask "zulu8"
+mas "1Password for Safari", id: 1569813296
 mas "Actions", id: 1586435171
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
@@ -248,7 +249,6 @@ mas "Craft", id: 1487937127
 mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
 mas "Dropover", id: 1355679052
-mas "Enpass", id: 732710998
 mas "Equinox", id: 1591510203
 mas "Keynote", id: 409183694
 mas "MenubarX", id: 1575588022
