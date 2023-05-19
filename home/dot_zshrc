@@ -40,7 +40,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     export HOMEBREW_UNINSTALL_DEPENDENCIES=1
     export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
-    export SSH_AUTH_SOCK="$HOME/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
 
     [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
     [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
