@@ -39,7 +39,7 @@ brew "colima"
 # Platform built on V8 to build network applications
 brew "node"
 # Package acting as bridge between Node projects and their package managers
-brew "corepack"
+brew "corepack", link: false
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Open source suite of directory software
@@ -112,6 +112,8 @@ brew "micro"
 brew "nano"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# OpenBSD freely-licensed SSH connectivity tools
+brew "openssh"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Protocol buffers (Google's data interchange format)
@@ -154,6 +156,8 @@ brew "oven-sh/bun/bun"
 brew "shivammathur/php/php@7.4", link: true
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Enable Windows-like alt-tab
