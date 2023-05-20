@@ -39,7 +39,7 @@ brew "colima"
 # Platform built on V8 to build network applications
 brew "node"
 # Package acting as bridge between Node projects and their package managers
-brew "corepack", link: false
+brew "corepack"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Open source suite of directory software
