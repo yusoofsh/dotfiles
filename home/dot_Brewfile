@@ -216,8 +216,6 @@ cask "pictogram"
 cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Store SSH keys in the Secure Enclave
-cask "secretive"
 # Screenshot measurement and annotation tool
 cask "shottr"
 # Music streaming service
