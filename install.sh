@@ -26,7 +26,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
     # Initialize dotfiles
     echo ""
     echo "🚀 Initializing dotfiles"
-    chezmoi init --apply --verbose yusoofsh
+    chezmoi init --verbose --apply --ssh yusoofsh
 
 elif [[ $(uname -s) == "Linux" ]]; then
     # Initialize dotfiles
