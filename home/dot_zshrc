@@ -12,6 +12,7 @@ export PATH="$GOPATH/bin:$PATH"
 export CARGOPATH="$HOME/.cargo"
 export PATH="$CARGOPATH/bin:$PATH"
 
+export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 export _ZO_FZF_OPTS="--reverse --border --height 40%"
 
