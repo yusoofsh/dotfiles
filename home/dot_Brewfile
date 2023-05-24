@@ -1,3 +1,4 @@
+tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -64,6 +65,8 @@ brew "exa"
 brew "exercism"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line tools for fly.io services
+brew "flyctl"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
 # Generic library support script
@@ -84,6 +87,8 @@ brew "git-filter-repo"
 brew "git-flow-avh"
 # Git extension for versioning large files
 brew "git-lfs"
+# Open-source GitLab command-line tool
+brew "glab"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Ping, but with a graph
@@ -148,8 +153,6 @@ brew "zip"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# NextDNS DNS/53 to DoH Proxy
-brew "nextdns/tap/nextdns"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # General-purpose scripting language
@@ -206,8 +209,6 @@ cask "microsoft-teams"
 cask "miniconda"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos"
-# MikroTik Winbox
-cask "nrlquaker-winbox"
 # Calculator and converter application
 cask "numi"
 # Customize and maintain app icons

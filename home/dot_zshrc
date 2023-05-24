@@ -26,6 +26,7 @@ autoload -Uz compinit
 compinit
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source "$HOME/.config/op/plugins.sh"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/sbin:$PATH"
