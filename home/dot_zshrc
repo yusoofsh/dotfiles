@@ -25,6 +25,8 @@ zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 source "$HOME/.config/op/plugins.sh"
 
