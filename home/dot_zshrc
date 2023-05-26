@@ -28,7 +28,6 @@ compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-source "$HOME/.config/op/plugins.sh"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/sbin:$PATH"
@@ -45,10 +44,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export HOMEBREW_UNINSTALL_DEPENDENCIES=1
     export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
     [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
     [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    source "$HOME/.config/op/plugins.sh"
 
     # PNPM Setup
     export PNPM_HOME="$HOME/Library/pnpm"
