@@ -12,6 +12,7 @@ export PATH="$GOPATH/bin:$PATH"
 export CARGOPATH="$HOME/.cargo"
 export PATH="$CARGOPATH/bin:$PATH"
 
+export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 export _ZO_FZF_OPTS="--reverse --border --height 40%"
 
@@ -41,9 +42,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$HOME/Library/Android/SDK/platform-tools:$PATH"
     export PATH="$HOME/Library/Android/SDK/tools:$PATH"
 
-    export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-    export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
     export HOMEBREW_UNINSTALL_DEPENDENCIES=1
+    export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 
     [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
     [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
