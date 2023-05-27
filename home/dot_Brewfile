@@ -209,6 +209,8 @@ cask "microsoft-teams"
 cask "miniconda"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos"
+# MikroTik Winbox
+cask "nrlquaker-winbox"
 # Calculator and converter application
 cask "numi"
 # Customize and maintain app icons
