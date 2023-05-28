@@ -201,6 +201,8 @@ cask "iina"
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
+# Customize mouse behavior
+cask "linearmouse"
 # Clipboard manager
 cask "maccy"
 # Meet, chat, call, and collaborate in just one place
@@ -209,8 +211,6 @@ cask "microsoft-teams"
 cask "miniconda"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos"
-# MikroTik Winbox
-cask "nrlquaker-winbox"
 # Calculator and converter application
 cask "numi"
 # Customize and maintain app icons
@@ -223,6 +223,8 @@ cask "proxyman"
 cask "raycast"
 # Screenshot measurement and annotation tool
 cask "shottr"
+# Displays all open files and sockets in use by all running processes
+cask "sloth"
 # Music streaming service
 cask "spotify"
 # Video game digital distribution service
@@ -249,7 +251,6 @@ cask "zoom"
 cask "zulu8"
 mas "1Password for Safari", id: 1569813296
 mas "Actions", id: 1586435171
-mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Command X", id: 6448461551
 mas "Craft", id: 1487937127
@@ -257,6 +258,7 @@ mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
 mas "Dropover", id: 1355679052
 mas "Equinox", id: 1591510203
+mas "Ghostery – Privacy Ad Blocker", id: 1436953057
 mas "Keynote", id: 409183694
 mas "MenubarX", id: 1575588022
 mas "Numbers", id: 409203825
