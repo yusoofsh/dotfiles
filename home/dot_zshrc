@@ -93,8 +93,9 @@ alias dig="doggo"
 alias nano="micro"
 alias python="python3"
 
-alias man="man $argv 2> /dev/null"
 alias ls="exa --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
+alias man="man $argv 2> /dev/null"
+
 alias up="$HOME/.script/up.sh"
 
 # Fig post block. Keep at the bottom of this file.
