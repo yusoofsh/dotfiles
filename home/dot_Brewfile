@@ -79,6 +79,8 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Quickly rewrite git repository history
