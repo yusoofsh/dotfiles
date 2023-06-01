@@ -21,11 +21,13 @@ fi
 #
 
 if [[ -z "$EDITOR" ]]; then
-  export EDITOR='nano'
+  export EDITOR='micro'
 fi
+
 if [[ -z "$VISUAL" ]]; then
   export VISUAL='code --wait'
 fi
+
 if [[ -z "$PAGER" ]]; then
   export PAGER='less'
 fi
