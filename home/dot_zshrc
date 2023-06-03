@@ -28,7 +28,6 @@ compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-source "$HOME/.config/op/plugins.sh"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/sbin:$PATH"
@@ -47,6 +46,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     [ "$TERM_PROGRAM" = "vscode" ] && source "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-rc.zsh"
     [ "$TERM_PROGRAM" = "iTerm.app" ] && source "${HOME}/.iterm2_shell_integration.zsh"
+
+    source "$HOME/.config/op/plugins.sh"
 
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -100,5 +101,3 @@ alias up="$HOME/.script/up.sh"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
