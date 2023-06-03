@@ -3,8 +3,6 @@
 
 export PATH="$HOME/.local/bin:$PATH"
 
-export JENV_ROOT="$HOME/.jenv"
-export PATH="$JENV_ROOT/bin:$PATH"
 export PUB_CACHE="$HOME/.pub-cache"
 export PATH="$PUB_CACHE/bin:$PATH"
 export GOPATH="$HOME/.go"
@@ -16,11 +14,9 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 export _ZO_FZF_OPTS="--reverse --border --height 40%"
 
-# Lines configured by zsh-newuser-install
 HISTSIZE=100000
 SAVEHIST=100000
 
-# The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
@@ -41,6 +37,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$HOME/Library/Android/SDK/platform-tools:$PATH"
     export PATH="$HOME/Library/Android/SDK/tools:$PATH"
 
+    export JENV_ROOT="$HOME/.jenv"
+    export PATH="$JENV_ROOT/bin:$PATH"
+
     export HOMEBREW_UNINSTALL_DEPENDENCIES=1
     export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 
@@ -50,6 +49,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     source "$HOME/.config/op/plugins.sh"
 
     eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(jenv init -)"
 
     # PNPM Setup
     export PNPM_HOME="$HOME/Library/pnpm"
@@ -79,7 +79,6 @@ fi
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
-eval "$(jenv init -)"
 
 setopt MENU_COMPLETE
 # setopt nocorrect
