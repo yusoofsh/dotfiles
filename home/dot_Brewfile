@@ -183,7 +183,6 @@ cask "figma"
 cask "flutter"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
-cask "font-inconsolata"
 cask "font-inter"
 # Monospaced font with cursive italics and programming symbol ligatures
 cask "font-victor-mono"
