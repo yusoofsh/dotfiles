@@ -212,6 +212,8 @@ cask "miniconda"
 cask "mos"
 # Calculator and converter application
 cask "numi"
+# Administration and development platform for PostgreSQL
+cask "pgadmin4"
 # Customize and maintain app icons
 cask "pictogram"
 # Collaboration platform for API development
