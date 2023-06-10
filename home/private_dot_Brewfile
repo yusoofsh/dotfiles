@@ -97,6 +97,8 @@ brew "krb5"
 brew "libressl"
 # Rainbows and unicorns in your console!
 brew "lolcat"
+# Keep your Mac's application settings in sync
+brew "mackup"
 # Move files and folders to the trash
 brew "macos-trash"
 # Utility for directing compilation
@@ -272,7 +274,6 @@ mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "Termius", id: 1176074088
 mas "TestFlight", id: 899247664
-mas "Today", id: 6443714928
 mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
@@ -280,7 +281,6 @@ vscode "ahmadalli.vscode-nginx-conf"
 vscode "alyxz.icons-carbon-tweaked"
 vscode "ambar.bundle-size"
 vscode "arcanis.vscode-zipfs"
-vscode "BeardedBear.beardedtheme"
 vscode "bennycode.sort-everything"
 vscode "bradlc.vscode-tailwindcss"
 vscode "brunnerh.file-properties-viewer"
@@ -299,8 +299,6 @@ vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
 vscode "esbenp.prettier-vscode"
-vscode "formulahendry.auto-close-tag"
-vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
 vscode "GitHub.codespaces"
