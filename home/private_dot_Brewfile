@@ -139,8 +139,6 @@ brew "terminal-notifier"
 brew "unixodbc"
 # Execute commands when watched files change
 brew "watchexec"
-# Generate WireGuard profile from Cloudflare Warp account
-brew "wgcf"
 # Internet file retriever
 brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -202,8 +200,6 @@ cask "iina"
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
-# Customize mouse behavior
-cask "linearmouse"
 # Clipboard manager
 cask "maccy"
 # Meet, chat, call, and collaborate in just one place
@@ -214,14 +210,10 @@ cask "miniconda"
 cask "mos"
 # Calculator and converter application
 cask "numi"
-# Administration and development platform for PostgreSQL
-cask "pgadmin4"
 # Customize and maintain app icons
 cask "pictogram"
 # Collaboration platform for API development
 cask "postman"
-# HTTP debugging proxy
-cask "proxyman"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Screenshot measurement and annotation tool
