@@ -161,8 +161,6 @@ cask "aldente"
 cask "alt-tab"
 # Tools for building Android applications
 cask "android-studio"
-# Tool to flash OS images to SD cards & USB drives
-cask "balenaetcher"
 # Display management tool
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
@@ -232,6 +230,8 @@ cask "tailscale"
 cask "temurin"
 # Utility to change the default backup interval of Time Machine
 cask "timemachineeditor"
+# Web browser focusing on security
+cask "tor-browser"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
@@ -252,7 +252,6 @@ mas "Command X", id: 6448461551
 mas "Craft", id: 1487937127
 mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
-mas "Dropover", id: 1355679052
 mas "Equinox", id: 1591510203
 mas "Ghostery – Privacy Ad Blocker", id: 1436953057
 mas "Keynote", id: 409183694
@@ -286,6 +285,7 @@ vscode "devMike.mikrotik-routeros-script"
 vscode "DEVSENSE.composer-php-vscode"
 vscode "DEVSENSE.phptools-vscode"
 vscode "DEVSENSE.profiler-php-vscode"
+vscode "DotJoshJohnson.xml"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
@@ -332,7 +332,6 @@ vscode "streetsidesoftware.code-spell-checker"
 vscode "tamasfe.even-better-toml"
 vscode "tommasov.hosts"
 vscode "tonybaloney.vscode-pets"
-vscode "undefined_publisher.yummey"
 vscode "usernamehw.errorlens"
 vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "vknabel.vscode-apple-swift-format"
