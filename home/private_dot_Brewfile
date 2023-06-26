@@ -1,4 +1,5 @@
 tap "1password/tap"
+tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -151,10 +152,10 @@ brew "zoxide"
 brew "zsh"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
+# Password manager
+cask "1password-beta"
 # Command-line helper for the 1Password password manager
-cask "1password-cli"
+cask "1password-cli-beta"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Enable Windows-like alt-tab
