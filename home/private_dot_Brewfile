@@ -213,8 +213,6 @@ cask "pictogram"
 cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Screenshot measurement and annotation tool
-cask "shottr"
 # Displays all open files and sockets in use by all running processes
 cask "sloth"
 # Music streaming service
