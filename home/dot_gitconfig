@@ -1,0 +1,140 @@
+[user]
+	name = Yusoof Moh
+
+[color "branch"]
+	current = yellow bold reverse
+	local = yellow bold
+	remote = green bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = cyan
+
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+	diff = auto
+
+[core]
+	pager = bat
+	whitespace = trailing-space
+	autocrlf = input
+	longpaths = true
+	excludesFile = ~/.gitignore
+	editor = code --wait
+	quotepath = false
+	ignoreCase = false
+
+[commit]
+	gpgSign = true
+
+[credential]
+	autoDetectTimeout = 500
+	guiPrompt = false
+	cacheOptions = --timeout 1200
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
+
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+
+[diff]
+	mnemonicPrefix = true
+	renames = true
+	wordRegex = .
+	submodule = log
+
+[difftool]
+	prompt = false
+
+[fetch]
+	recurseSubmodules = on-demand
+	prune = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[gitflow "branch"]
+	master = main
+	develop = dev
+
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+
+[gpg]
+	program = /usr/local/bin/gpg
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = /Users/yusoofsh/.ssh/allowed_signers
+
+[grep]
+	break = true
+	heading = true
+	lineNumber = true
+	extendedRegexp = true
+
+[help]
+	autoCorrect = 20
+
+[init]
+	defaultBranch = main
+
+[log]
+	abbrevCommit = true
+	follow = true
+	decorate = true
+
+[merge]
+	tool = code --wait
+
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+[mergetool]
+	keepBackup = true
+	keepTemporaries = false
+	writeToTemp = true
+	prompt = false
+
+[pull]
+	ff = only
+
+[push]
+	default = matching
+	followTags = true
+	autoSetupRemote = true
+
+[rebase]
+	autoSquash = true
+	updateRefs = true
+
+[status]
+	submoduleSummary = true
+	showUntrackedFiles = all
+
+[tag]
+	sort = version:refname
+	gpgSign = true
+
+[includeIf "gitdir:~/Documents/Division/Open/Code/"]
+	path = ~/Documents/Division/Open/Code/.gitconfig
+
+[includeIf "gitdir:~/Documents/Division/Office/CloudThought/"]
+	path = ~/Documents/Division/Office/CloudThought/.gitconfig

@@ -1,0 +1,54 @@
+[
+	{
+		"command": "-editor.action.deleteLines",
+		"key": "shift+cmd+k",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"command": "editor.action.deleteLines",
+		"key": "cmd+y",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"command": "focusPreviousCodeAction",
+		"key": "ctrl+k",
+		"when": "CodeActionMenuVisible"
+	},
+	{
+		"command": "focusNextCodeAction",
+		"key": "ctrl+j",
+		"when": "CodeActionMenuVisible"
+	},
+	{
+		"command": "expand_region",
+		"key": "ctrl+w",
+		"when": "editorTextFocus"
+	},
+	{
+		"command": "undo_expand_region",
+		"key": "ctrl+shift+w",
+		"when": "editorTextFocus && editorHasSelection"
+	},
+	{
+		"command": "-headwind.sortTailwindClasses",
+		"key": "shift+cmd+t",
+		"when": "editorFocus"
+	},
+	{
+		"command": "workbench.action.gotoLine",
+		"key": "cmd+;"
+	},
+	{
+		"command": "-workbench.action.gotoLine",
+		"key": "ctrl+g"
+	},
+	{
+		"command": "-workbench.action.quickOpenView",
+		"key": "ctrl+q"
+	},
+	{
+		"command": "-workbench.action.quickOpenNavigateNextInViewPicker",
+		"key": "ctrl+q",
+		"when": "inQuickOpen && inViewsPicker"
+	}
+]
