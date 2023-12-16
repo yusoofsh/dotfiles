@@ -1,0 +1,171 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout = 1000000
+add_newline = true
+
+# [line_break]
+# disabled = true
+
+[c]
+detect_extensions = [
+]
+
+[cmake]
+detect_extensions = [
+]
+
+[cobol]
+detect_extensions = [
+]
+
+[crystal]
+detect_extensions = [
+]
+
+[daml]
+detect_extensions = [
+]
+
+[dart]
+detect_extensions = [
+]
+
+[deno]
+detect_extensions = [
+]
+
+[dotnet]
+detect_extensions = [
+]
+
+[elixir]
+detect_extensions = [
+]
+
+[elm]
+detect_extensions = [
+]
+
+[erlang]
+detect_extensions = [
+]
+
+[fennel]
+detect_extensions = [
+]
+
+[golang]
+detect_extensions = [
+]
+
+[gradle]
+detect_extensions = [
+]
+
+[haxe]
+detect_extensions = [
+]
+
+[haskell]
+detect_extensions = [
+]
+
+[helm]
+detect_extensions = [
+]
+
+[java]
+detect_extensions = [
+]
+
+[julia]
+detect_extensions = [
+]
+
+[kotlin]
+detect_extensions = [
+]
+
+[kubernetes]
+detect_extensions = [
+]
+
+[lua]
+detect_extensions = [
+]
+
+[nim]
+detect_extensions = [
+]
+
+[nodejs]
+detect_extensions = [
+]
+
+[ocaml]
+detect_extensions = [
+]
+
+[opa]
+detect_extensions = [
+]
+
+[perl]
+detect_extensions = [
+]
+
+[php]
+detect_extensions = [
+]
+
+[python]
+detect_extensions = [
+]
+
+[purescript]
+detect_extensions = [
+]
+
+[red]
+detect_extensions = [
+]
+
+[ruby]
+detect_extensions = [
+]
+
+[rust]
+detect_extensions = [
+]
+
+[rlang]
+detect_extensions = [
+]
+
+[scala]
+detect_extensions = [
+]
+
+[solidity]
+detect_extensions = [
+]
+
+[swift]
+detect_extensions = [
+]
+
+[terraform]
+detect_extensions = [
+]
+
+[vlang]
+detect_extensions = [
+]
+
+[vagrant]
+detect_extensions = [
+]
+
+[zig]
+detect_extensions = [
+]

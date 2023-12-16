@@ -1,0 +1,129 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[plugins]
+
+# For example:
+#
+# [plugins.base16]
+# github = "chriskempson/base16-shell"
+
+[plugins.pre]
+inline = """
+export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+"""
+
+[plugins.zsh-autocomplete]
+github = "marlonrichert/zsh-autocomplete"
+[plugins.zsh-autocomplete.hooks]
+pre = """
+zstyle ':autocomplete:*' delay 0.1
+"""
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+[plugins.zsh-autosuggestions.hooks]
+pre = """
+autoload -Uz compinit && compinit -D -i -u -C
+export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+"""
+
+[plugins.fzf-zsh-plugin]
+github = "unixorn/fzf-zsh-plugin"
+
+[plugins.prezto]
+github = "sorin-ionescu/prezto"
+use = [
+  "modules/environment/init.zsh",
+  "modules/spectrum/init.zsh",
+]
+
+[plugins.ohmyzsh]
+github = "ohmyzsh/ohmyzsh"
+use = [
+  "lib/correction.zsh",
+  "plugins/command-not-found/command-not-found.plugin.zsh",
+  "plugins/common-aliases/common-aliases.plugin.zsh",
+  "plugins/gnu-utils/gnu-utils.plugin.zsh",
+  "plugins/dircycle/dircycle.plugin.zsh",
+  "plugins/zoxide/zoxide.plugin.zsh",
+  "plugins/brew/brew.plugin.zsh",
+  "plugins/iterm2/iterm2.plugin.zsh",
+  "plugins/vscode/vscode.plugin.zsh",
+  "plugins/xcode/xcode.plugin.zsh",
+  "plugins/starship/starship.plugin.zsh",
+]
+[plugins.ohmyzsh.hooks]
+pre = """
+export ENABLE_CORRECTION=true
+export SPROMPT="zsh: correct %F{1}%R%f to %F{2}%r%f [nyae]? "
+export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_UNINSTALL_DEPENDENCIES=1
+export HOMEBREW_NO_ENV_HINTS=1
+zstyle ':omz:plugins:iterm2' shell-integration yes
+"""
+post = """
+unsetopt correct_all
+setopt correct
+"""
+
+[plugins.zephyr]
+github = "mattmc3/zephyr"
+use = [
+  "plugins/color/color.plugin.zsh",
+  "plugins/clipboard/clipboard.plugin.zsh",
+  "plugins/directory/directory.plugin.zsh",
+  "plugins/history/history.plugin.zsh",
+  "plugins/terminal/terminal.plugin.zsh",
+  "plugins/macos/macos.plugin.zsh",
+  "plugins/utility/utility.plugin.zsh",
+]
+[plugins.zephyr.hooks]
+pre = """
+export HISTFILE="$HOME/.zsh_history"
+zstyle ':zephyr:*:*' color 'yes'
+zstyle ':zephyr:plugin:terminal' auto-title 'yes'
+zstyle ':zephyr:plugin:terminal:window-title' format '%s'
+zstyle ':zephyr:plugin:terminal:tab-title' format '%s'
+zstyle ':zephyr:plugin:terminal:multiplexer-title' format '%s'
+zstyle ':zephyr:plugin:history:alias' skip 'yes'
+zstyle ':zephyr:plugin:directory:alias' skip 'yes'
+zstyle ':zephyr:plugin:editor' key-bindings 'emacs'
+zstyle ':zephyr:plugin:editor' ps-context 'yes'
+"""
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+
+[plugins.zsh-edit]
+github = "marlonrichert/zsh-edit"
+
+[plugins.atuin]
+github = "atuinsh/atuin"
+[plugins.atuin.hooks]
+pre = """
+export ATUIN_NOBIND="true"
+"""
+post = """
+bindkey '^[[A' _atuin_search_widget
+bindkey '^[OA' _atuin_search_widget
+"""
+
+[plugins.post]
+inline = """
+bindkey '\t' autosuggest-accept
+"""
