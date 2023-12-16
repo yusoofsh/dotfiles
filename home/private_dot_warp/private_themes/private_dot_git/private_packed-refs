@@ -1,8 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-04667bac7cde6b0f7777c1720001ed164cbb064f refs/remotes/origin/aloke/update_readme
-58bf30f1d4cdf164b9feb364c5934588efa5f0c1 refs/remotes/origin/elvis
-9615988a27573258afcd1d054bc029fdfa8eac4b refs/remotes/origin/gagata/creds
-dde6f0685eea289954569589d7777493349ee877 refs/remotes/origin/lint-reqs
-c793314a7998a8dde6cdc87c120b32a519579e4b refs/remotes/origin/main
-a07fa23247ffd031eb335160f6c47a42b4467e91 refs/remotes/origin/main-readme
-27b8a9a931e8a59d1da9a0508960ff4c7b289061 refs/remotes/origin/prepopulate_themes

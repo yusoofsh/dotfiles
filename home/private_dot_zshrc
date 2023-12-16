@@ -4,15 +4,16 @@ eval "$(sheldon source)"
 
 [ "$(which carapace)" ] && source <(carapace _carapace zsh)
 
-alias z="zi"
 alias c="clear"
+alias cat="bat"
+alias dig="doggo"
+alias e="exit"
+alias find="fd"
+alias nano="micro"
 alias npx="bunx"
 alias pnpx="bunx"
-alias cat="bat"
-alias find="fd"
 alias vim="nvim"
-alias dig="doggo"
-alias nano="micro"
+alias z="zi"
 
 alias ls="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
 alias up="$HOME/.script/up.sh"

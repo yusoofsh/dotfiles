@@ -1,5 +1,3 @@
-tap "1password/tap"
-tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -163,8 +161,6 @@ brew "corepack"
 brew "coreutils"
 # Power of curl, ease of use of httpie
 brew "curlie"
-# Load/unload environment variables based on $PWD
-brew "direnv"
 # Command-line DNS Client for Humans
 brew "doggo"
 # Select default apps for documents and URL schemes on macOS
@@ -183,8 +179,12 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
 # Command-line option parsing utility
 brew "gnu-getopt"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Ping, but with a graph
@@ -209,6 +209,8 @@ brew "unibilium"
 brew "libtermkey"
 # C99 library which implements a VT220 or xterm terminal emulator
 brew "libvterm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # High-performance theorem prover
 brew "z3"
 # Rainbows and unicorns in your console!
@@ -217,6 +219,8 @@ brew "lolcat"
 brew "luajit"
 # Bare libuv bindings for lua
 brew "luv"
+# Keep your Mac's application settings in sync
+brew "mackup"
 # Move files and folders to the trash
 brew "macos-trash"
 # Utility for directing compilation
@@ -237,6 +241,10 @@ brew "tree-sitter"
 brew "neovim"
 # Perl compatible regular expressions library
 brew "pcre"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Protocol buffers (Google's data interchange format)
@@ -247,10 +255,14 @@ brew "pv"
 brew "python@3.11"
 # YAML framework for Python
 brew "pyyaml"
+# Reattach process (e.g., tmux) to background
+brew "reattach-to-user-namespace"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
+# Fast, configurable, shell plugin manager
+brew "sheldon"
 # Cross-shell prompt for astronauts
 brew "starship"
 # High-performance system programming language
@@ -261,6 +273,10 @@ brew "tealdeer"
 brew "telnet"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
+# Terminal multiplexer
+brew "tmux"
+# Plugin manager for tmux
+brew "tpm"
 # Internet file retriever
 brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -269,6 +285,8 @@ brew "yq"
 brew "zip"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # multi-shell multi-command argument completer
@@ -309,8 +327,6 @@ cask "font-inter"
 cask "font-victor-mono"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
-# Tools to protect your files
-cask "gpg-suite-no-mail"
 # Grammarly for desktop
 cask "grammarly-desktop"
 # Graphically shows disk usage within a file system
@@ -361,8 +377,6 @@ cask "timemachineeditor"
 cask "visual-studio-code"
 # Remote desktop application focusing on security
 cask "vnc-viewer"
-# Rust-based terminal
-cask "warp"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
 mas "Actions", id: 1586435171
@@ -372,7 +386,6 @@ mas "Craft", id: 1487937127
 mas "DaVinci Resolve", id: 571213070
 mas "Developer", id: 640199958
 mas "Disk Speed Test", id: 425264550
-mas "Dropover", id: 1355679052
 mas "Equinox", id: 1591510203
 mas "Ghostery – Privacy Ad Blocker", id: 1436953057
 mas "Keynote", id: 409183694
@@ -392,11 +405,11 @@ mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 mas "‎WhatsApp", id: 310633997
 vscode "ahmadalli.vscode-nginx-conf"
+vscode "alexdauenhauer.catppuccin-noctis"
 vscode "alyxz.icons-carbon-tweaked"
 vscode "arcanis.vscode-zipfs"
 vscode "astro-build.astro-vscode"
 vscode "bennycode.sort-everything"
-vscode "biomejs.biome"
 vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "brunnerh.file-properties-viewer"
@@ -406,6 +419,7 @@ vscode "Dart-Code.dart-code"
 vscode "dbaeumer.vscode-eslint"
 vscode "dbankier.vscode-quick-select"
 vscode "devMike.mikrotik-routeros-script"
+vscode "dotenv.dotenv-vscode"
 vscode "DotJoshJohnson.xml"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
@@ -453,10 +467,10 @@ vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "sleistner.vscode-fileutils"
-vscode "socheatsok78-lab.dotenv-vscode-stripped"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "Tailscale.vscode-tailscale"
 vscode "tamasfe.even-better-toml"
+vscode "thang-nm.catppuccin-perfect-icons"
 vscode "tommasov.hosts"
 vscode "tonybaloney.vscode-pets"
 vscode "usernamehw.errorlens"
