@@ -1,8 +1,23 @@
+
 eval "$(sheldon source)"
+
+[ "$(which carapace)" ] && source <(carapace _carapace zsh)
 
 [ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"
 
-[ "$(which carapace)" ] && source <(carapace _carapace zsh)
+if [ -z "$TMUX" ]; then
+  tmux attach -t $(PWD | sed 's/.*\///g') 2>/dev/null || tmux new -s $(PWD | sed 's/.*\///g') 2>/dev/null
+  exit
+fi
+
+# if [ -z "$TMUX" ]; then
+#   tmux start-server
+#   local dir=${PWD##*/}
+#   local md5=$(printf '%s' "$PWD" | md5sum | cut -d ' ' -f 1)
+#   local session_name="${dir}-${md5:0:6}"
+#   tmux attach -t "$session_name" -d 2>/dev/null || tmux new -s "$session_name" -d
+#   exit
+# fi
 
 alias c="clear"
 alias cat="bat"

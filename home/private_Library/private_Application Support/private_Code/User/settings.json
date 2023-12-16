@@ -466,7 +466,7 @@
   "window.titleSeparator": "  ·  ",
   "workbench.accounts.experimental.showEntitlements": true,
   "workbench.cloudChanges.continueOn": "off",
-  "workbench.colorTheme": "Catppuccin Noctis Mocha",
+  "workbench.colorTheme": "Moonic Heavy",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
