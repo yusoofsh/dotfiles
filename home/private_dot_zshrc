@@ -1,1 +1,75 @@
-eval "$(sheldon source)" >/dev/null
+#
+# Paths
+#
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export HOMEBREW_PREFIX="/opt/homebrew"
+export PATH="$HOMEBREW_PREFIX/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/libressl/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/swift/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/zip/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/sbin:$PATH"
+
+export ANDROID_PATH="$HOME/Library/Android/SDK"
+export PATH="$ANDROID_PATH/cmdline-tools/latest/bin:$PATH"
+export PATH="$ANDROID_PATH/platform-tools:$PATH"
+export PATH="$ANDROID_PATH/tools:$PATH"
+
+export CARGOPATH="$HOME/.cargo"
+export PATH="$CARGOPATH/bin:$PATH"
+
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH"
+
+export PUB_CACHE="$HOME/.pub-cache"
+export PATH="$PUB_CACHE/bin:$PATH"
+
+export DOCKER_HOME="$HOME/.docker"
+export PATH="$DOCKER_HOME/bin:$PATH"
+
+#
+# Aliases
+#
+
+alias q="e"
+alias z="zi"
+alias e="exit"
+alias find="fd"
+alias cat="bat"
+alias c="clear"
+alias pnpx="npx"
+alias npx="bunx"
+alias vim="nvim"
+alias dig="doggo"
+alias nano="micro"
+alias up="syncer"
+alias syncer="$HOME/.script/syncer.sh"
+alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
+
+#
+# Shell configurations managed by Sheldon
+# See $HOME/.config/sheldon/plugins.toml
+#
+
+eval "$(sheldon source)"
+
+#
+# Misc configurations
+#
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+[ "$(which carapace)" ] && source <(carapace _carapace zsh)
+# [ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"
+# if [ -z "$TMUX" ]; then
+#   local md5=$(printf '%s' "$PWD" | md5sum | cut -d ' ' -f 1)
+#   local session_name="${md5:0:6}"
+#   tmux attach -t $session_name 2>/dev/null || tmux new -s $session_name 2>/dev/null
+#   exit
+# fi
+bindkey '\t' forward-word

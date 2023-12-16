@@ -35,7 +35,11 @@
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
   "application.experimental.rendererProfiling": true,
+  "application.shellEnvironmentResolutionTimeout": 30,
   "audioCues.clear": "on",
   "audioCues.debouncePositionChanges": true,
   "audioCues.format": "userGesture",
@@ -317,10 +321,7 @@
   "gitlens.views.workspaces.showIncomingActivity": true,
   "gitlens.views.worktrees.files.layout": "list",
   "go.alternateTools": {
-    "dlv": "/Users/yusofsh/.go/bin/dlv",
-    "go": "go",
-    "go-outline": "/Users/yusoofsh/.go/bin/go-outline",
-    "gopls": "/Users/yusoofsh/.go/bin/gopls"
+    "go": "go"
   },
   "go.inlayHints.parameterNames": true,
   "go.toolsManagement.autoUpdate": true,
@@ -494,8 +495,5 @@
   "zenMode.hideActivityBar": true,
   "zenMode.hideLineNumbers": true,
   "zenMode.hideStatusBar": true,
-  "zenMode.showTabs": "single",
-  "[xml]": {
-    "editor.defaultFormatter": "DotJoshJohnson.xml"
-  }
+  "zenMode.showTabs": "single"
 }

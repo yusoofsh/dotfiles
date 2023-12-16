@@ -41,7 +41,6 @@
 	autoDetectTimeout = 500
 	guiPrompt = false
 	cacheOptions = --timeout 1200
-	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 
 [credential "https://dev.azure.com"]
@@ -76,13 +75,6 @@
 	release = release/
 	hotfix = hotfix/
 	support = support/
-
-[gpg]
-	program = /usr/local/bin/gpg
-	format = ssh
-
-[gpg "ssh"]
-	allowedSignersFile = /Users/yusoofsh/.ssh/allowed_signers
 
 [grep]
 	break = true
