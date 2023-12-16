@@ -21,6 +21,22 @@ shell = "zsh"
 
 [plugins.pre]
 inline = """
+alias nano="micro"
+alias dig="doggo"
+alias vim="nvim"
+alias npx="bunx"
+alias pnpx="npx"
+alias c="clear"
+alias cat="bat"
+alias find="fd"
+alias e="exit"
+alias z="zi"
+alias q="e"
+
+alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
+alias syncer="$HOME/.script/syncer.sh"
+alias up="syncer"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 """
@@ -126,4 +142,12 @@ bindkey '^[OA' _atuin_search_widget
 [plugins.post]
 inline = """
 bindkey '\t' autosuggest-accept
+[ "$(which carapace)" ] && source <(carapace _carapace zsh)
+[ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"
+if [ -z "$TMUX" ]; then
+  local md5=$(printf '%s' "$PWD" | md5sum | cut -d ' ' -f 1)
+  local session_name="${md5:0:6}"
+  tmux attach -t $session_name 2>/dev/null || tmux new -s $session_name 2>/dev/null
+  exit
+fi
 """

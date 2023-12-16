@@ -179,6 +179,8 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
 # Command-line option parsing utility
@@ -197,6 +199,10 @@ brew "harfbuzz"
 brew "jq"
 # Library for interacting with JSON
 brew "jsoncpp"
+# Text-based UI library
+brew "ncurses"
+# Pager program similar to more
+brew "less"
 # CBOR protocol implementation for C and others
 brew "libcbor"
 # Provides library functionality for FIDO U2F & FIDO 2.0, including USB
@@ -231,8 +237,6 @@ brew "mas"
 brew "micro"
 # Library for a binary-based efficient data interchange format
 brew "msgpack"
-# Text-based UI library
-brew "ncurses"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
 # Parser generator tool and incremental parsing library

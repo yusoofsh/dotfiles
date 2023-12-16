@@ -494,5 +494,8 @@
   "zenMode.hideActivityBar": true,
   "zenMode.hideLineNumbers": true,
   "zenMode.hideStatusBar": true,
-  "zenMode.showTabs": "single"
+  "zenMode.showTabs": "single",
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  }
 }
