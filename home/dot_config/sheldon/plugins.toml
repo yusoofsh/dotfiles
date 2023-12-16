@@ -21,21 +21,20 @@ shell = "zsh"
 
 [plugins.pre]
 inline = """
-alias nano="micro"
-alias dig="doggo"
-alias vim="nvim"
-alias npx="bunx"
-alias pnpx="npx"
-alias c="clear"
-alias cat="bat"
-alias find="fd"
-alias e="exit"
-alias z="zi"
 alias q="e"
-
-alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
-alias syncer="$HOME/.script/syncer.sh"
+alias z="zi"
+alias e="exit"
+alias find="fd"
+alias cat="bat"
+alias c="clear"
+alias pnpx="npx"
+alias npx="bunx"
+alias vim="nvim"
+alias dig="doggo"
+alias nano="micro"
 alias up="syncer"
+alias syncer="$HOME/.script/syncer.sh"
+alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
@@ -45,6 +44,7 @@ export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/
 github = "marlonrichert/zsh-autocomplete"
 [plugins.zsh-autocomplete.hooks]
 pre = """
+zstyle '*:compinit' arguments -D -i -u -C
 zstyle ':autocomplete:*' delay 0.1
 """
 
@@ -52,8 +52,6 @@ zstyle ':autocomplete:*' delay 0.1
 github = "zsh-users/zsh-autosuggestions"
 [plugins.zsh-autosuggestions.hooks]
 pre = """
-autoload -Uz compinit && compinit -D -i -u -C
-export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 """
 
@@ -141,7 +139,6 @@ bindkey '^[OA' _atuin_search_widget
 
 [plugins.post]
 inline = """
-bindkey '\t' autosuggest-accept
 [ "$(which carapace)" ] && source <(carapace _carapace zsh)
 [ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"
 if [ -z "$TMUX" ]; then
@@ -150,4 +147,5 @@ if [ -z "$TMUX" ]; then
   tmux attach -t $session_name 2>/dev/null || tmux new -s $session_name 2>/dev/null
   exit
 fi
+bindkey '\t' forward-word
 """
