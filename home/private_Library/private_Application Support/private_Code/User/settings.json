@@ -406,7 +406,6 @@
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.defaultProfile.osx": "sh",
   "terminal.integrated.enableBell": true,
   "terminal.integrated.env.osx": {
@@ -514,5 +513,6 @@
   "zenMode.hideActivityBar": true,
   "zenMode.hideLineNumbers": true,
   "zenMode.hideStatusBar": true,
-  "zenMode.showTabs": "single"
+  "zenMode.showTabs": "single",
+  "terminal.integrated.cursorStyle": "underline"
 }

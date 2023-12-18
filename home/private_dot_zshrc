@@ -1,4 +1,10 @@
 #
+# Paths
+#
+
+[ -f "$HOME/.shellpath" ] && source "$HOME/.shellpath"
+
+#
 # Shell configurations managed by Sheldon
 # See $HOME/.config/sheldon/plugins.toml
 #
@@ -9,10 +15,14 @@ eval "$(sheldon source)"
 # Misc configurations
 #
 
-source <(carapace _carapace zsh)
-
 [ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"
 [ -f "$HOME/.orbstack/shell/init.zsh" ] && source "$HOME/.orbstack/shell/init.zsh"
+
+source <(carapace _carapace zsh)
+
+export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 #
 # Aliases

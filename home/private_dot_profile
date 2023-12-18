@@ -7,11 +7,11 @@
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Auto start tmux session
+# Auto start tmux
 if command -v tmux >/dev/null 2>&1 && [ -n "$PS1" ] && [ -z "$TMUX" ] && [ -z "$EMACS" ] && [ -z "$VIM" ] && [ "$VSCODE_RESOLVING_ENVIRONMENT" != "1" ]; then
   if [ "$TERM_PROGRAM" = "iTerm.app" ]; then
     session_name=$(printf '%s:%s' "$TTY" "$PWD" | md5sum | cut -c 1-6)
-    { (tmux set-option -g destroy-unattached off && tmux attach -t "$session_name" || tmux new -s "$session_name") 1>/dev/null 2>&1 && exit; }
+    (tmux set-option -g destroy-unattached off && tmux attach -t "$session_name" || tmux new -s "$session_name") 1>/dev/null 2>&1 && exit
   else
     session_name="$(date +%s | md5sum | cut -c 1-6)"
     (tmux new -d -s "$session_name" \; set destroy-unattached on \; attach -t "$session_name") 1>/dev/null 2>&1 && exit
@@ -43,42 +43,4 @@ export LESS='-g -i -M -R -S -w -z-4'
 # Paths
 #
 
-export PATH="$HOME/.local/bin:$PATH"
-
-export PATH="$HOMEBREW_PREFIX/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/libressl/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/swift/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/opt/zip/bin:$PATH"
-export PATH="$HOMEBREW_PREFIX/sbin:$PATH"
-
-export ANDROID_PATH="$HOME/Library/Android/SDK"
-export PATH="$ANDROID_PATH/cmdline-tools/latest/bin:$PATH"
-export PATH="$ANDROID_PATH/platform-tools:$PATH"
-export PATH="$ANDROID_PATH/tools:$PATH"
-
-export CARGOPATH="$HOME/.cargo"
-export PATH="$CARGOPATH/bin:$PATH"
-
-export GOPATH="$HOME/.go"
-export PATH="$GOPATH/bin:$PATH"
-
-export PUB_CACHE="$HOME/.pub-cache"
-export PATH="$PUB_CACHE/bin:$PATH"
-
-export DOCKER_HOME="$HOME/.docker"
-export PATH="$DOCKER_HOME/bin:$PATH"
-
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-#
-# Post hooks
-#
-
-# Miscellaneous
-export FZF_BASE="$HOME/.fzf"
-export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
-export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+[ -f "$HOME/.shellpath" ] && . "$HOME/.shellpath"

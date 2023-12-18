@@ -1,0 +1,5 @@
+#
+# Paths
+#
+
+[ -f "$HOME/.shellpath" ] && source "$HOME/.shellpath"
