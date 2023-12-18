@@ -37,3 +37,4 @@ $RECYCLE.BIN/
 !.env.example
 *.log
 *.swp
+.key.txt.age

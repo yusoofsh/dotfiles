@@ -1,1 +1,1 @@
-*.pack.gpg filter=lfs diff=lfs merge=lfs -text
+*.pack.age filter=lfs diff=lfs merge=lfs -text

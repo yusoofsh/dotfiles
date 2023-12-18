@@ -1,19 +1,23 @@
 {
   "sourceDir": "~/Documents/Division/Open/Code/yusoofsh/dotfiles",
-  "encryption": "gpg",
-   "git": {
-     "autoCommit": true,
-     "autoPush": true
-   },
-  "status": {
-    "exclude": ["scripts"]
+  "encryption": "age",
+  "age": {
+    "recipient": "age1nk0w500lkwjcgqncxjphnypp0hrappjr9uvw9tqqqhdjdjqx5s3sck53cz",
+    "identity": "~/.config/chezmoi/.key.txt"
   },
-  "gpg": {
-    "recipient": "B46E6981",
-     "args": ["--quiet"]
+  "git": {
+    "autoCommit": true,
+    "autoPush": true
+  },
+  "status": {
+    "exclude": [
+      "scripts"
+    ]
   },
   "edit": {
     "command": "code",
-    "args": ["--wait"]
+    "args": [
+      "--wait"
+    ]
   }
 }
