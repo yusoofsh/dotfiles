@@ -2,8 +2,6 @@
 # Paths
 #
 
-export PATH="$HOME/.local/bin:$PATH"
-
 export HOMEBREW_PREFIX="/opt/homebrew"
 export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
@@ -30,6 +28,9 @@ export PATH="$PUB_CACHE/bin:$PATH"
 export DOCKER_HOME="$HOME/.docker"
 export PATH="$DOCKER_HOME/bin:$PATH"
 
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 #
 # Aliases
 #
@@ -49,27 +50,27 @@ alias up="syncer"
 alias syncer="$HOME/.script/syncer.sh"
 alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
 
-#
-# Shell configurations managed by Sheldon
-# See $HOME/.config/sheldon/plugins.toml
-#
+if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && "$TERM_PROGRAM" != "vscode" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
+  # Auto start Tmux session
+  local md5=$(printf '%s' "$PWD" | md5sum | cut -d ' ' -f 1)
+  local session_name="${md5:0:6}"
+  tmux attach -t $session_name 2>/dev/null || tmux new -s $session_name
 
-eval "$(sheldon source)"
+  exit >/dev/null 2>&1
+else
+  #
+  # Shell configurations managed by Sheldon
+  # See $HOME/.config/sheldon/plugins.toml
+  #
 
-#
-# Misc configurations
-#
+  eval "$(sheldon source)"
 
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
-export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  #
+  # Misc configurations
+  #
 
-[ "$(which carapace)" ] && source <(carapace _carapace zsh)
-# [ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"
-# if [ -z "$TMUX" ]; then
-#   local md5=$(printf '%s' "$PWD" | md5sum | cut -d ' ' -f 1)
-#   local session_name="${md5:0:6}"
-#   tmux attach -t $session_name 2>/dev/null || tmux new -s $session_name 2>/dev/null
-#   exit
-# fi
-bindkey '\t' forward-word
+  source <(carapace _carapace zsh)
+
+  source "$HOME/.config/op/plugins.sh" 2>/dev/null || :
+  source "$HOME/.orbstack/shell/init.zsh" 2>/dev/null || :
+fi

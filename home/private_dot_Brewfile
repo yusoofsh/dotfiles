@@ -409,7 +409,6 @@ mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 mas "‎WhatsApp", id: 310633997
 vscode "ahmadalli.vscode-nginx-conf"
-vscode "alexdauenhauer.catppuccin-noctis"
 vscode "alyxz.icons-carbon-tweaked"
 vscode "arcanis.vscode-zipfs"
 vscode "astro-build.astro-vscode"
@@ -475,6 +474,7 @@ vscode "streetsidesoftware.code-spell-checker"
 vscode "Tailscale.vscode-tailscale"
 vscode "tamasfe.even-better-toml"
 vscode "thang-nm.catppuccin-perfect-icons"
+vscode "timonwong.shellcheck"
 vscode "tommasov.hosts"
 vscode "tonybaloney.vscode-pets"
 vscode "usernamehw.errorlens"

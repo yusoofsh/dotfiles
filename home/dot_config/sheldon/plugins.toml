@@ -116,3 +116,9 @@ post = """
 bindkey '^[[A' _atuin_search_widget
 bindkey '^[OA' _atuin_search_widget
 """
+
+
+[plugins.post]
+inline = """
+bindkey '\t' autosuggest-accept
+"""

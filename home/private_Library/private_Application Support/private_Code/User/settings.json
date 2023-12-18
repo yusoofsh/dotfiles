@@ -97,8 +97,6 @@
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.experimental.showMoves": true,
   "diffEditor.experimental.useVersion2": true,
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.maxComputationTime": 0,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
@@ -141,7 +139,6 @@
   "editor.renderWhitespace": "boundary",
   "editor.scrollBeyondLastLine": false,
   "editor.selectionHighlight": false,
-  "editor.semanticHighlighting.enabled": true,
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
   "editor.stickyScroll.maxLineCount": 4,
@@ -356,7 +353,6 @@
   "notebook.stickyScroll.enabled": true,
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm.enableRunFromFolder": true,
-  "npm.packageManager": "auto",
   "npm.scriptExplorerAction": "run",
   "nxConsole.showNodeVersionOnStartup": false,
   "outline.collapseItems": "alwaysCollapse",
@@ -467,7 +463,6 @@
   "window.titleSeparator": "  ·  ",
   "workbench.accounts.experimental.showEntitlements": true,
   "workbench.cloudChanges.continueOn": "off",
-  "workbench.colorTheme": "Moonic Heavy",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
@@ -495,5 +490,7 @@
   "zenMode.hideActivityBar": true,
   "zenMode.hideLineNumbers": true,
   "zenMode.hideStatusBar": true,
-  "zenMode.showTabs": "single"
+  "zenMode.showTabs": "single",
+  "npm.packageManager": "bun",
+  "workbench.colorTheme": "Moonic II"
 }
