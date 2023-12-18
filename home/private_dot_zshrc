@@ -1,8 +1,10 @@
+#!/bin/zsh
+
 #
-# Paths
+# Misc configurations
 #
 
-[ -f "$HOME/.shellpath" ] && source "$HOME/.shellpath"
+[ -f "$HOME/.orbstack/shell/init.zsh" ] && source "$HOME/.orbstack/shell/init.zsh"
 
 #
 # Shell configurations managed by Sheldon
@@ -11,29 +13,4 @@
 
 eval "$(sheldon source)"
 
-#
-# Misc configurations
-#
-
-[ -f "$HOME/.config/op/plugins.sh" ] && source "$HOME/.config/op/plugins.sh"
-[ -f "$HOME/.orbstack/shell/init.zsh" ] && source "$HOME/.orbstack/shell/init.zsh"
-
 source <(carapace _carapace zsh)
-
-export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
-export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-#
-# Aliases
-#
-
-alias z="zi"
-alias c="clear"
-alias cat="bat"
-alias vim="nvim"
-alias nano="micro"
-alias pnpx="npx"
-alias npx="bunx"
-alias syncer="$HOME/.script/syncer.sh"
-alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"

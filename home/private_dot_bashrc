@@ -1,5 +1,1 @@
-#
-# Paths
-#
-
-[ -f "$HOME/.shellpath" ] && source "$HOME/.shellpath"
+#!/bin/bash
