@@ -30,7 +30,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
 
 elif [[ $(uname -s) == "Linux" ]]; then
     # Initialize dotfiles
-    sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply yusoofsh
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME"/.local/bin init --apply yusoofsh
 
 else
     echo ""
