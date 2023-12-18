@@ -34,8 +34,6 @@ export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/swift/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/zip/bin:$PATH"
 
-export ANDROID_SDK_ROOT="$HOMEBREW_PREFIX/share/android-commandlinetools"
-
 export ANDROID_HOME="$HOMEBREW_PREFIX/share/android-commandlinetools"
 export ANDROID_SDK_ROOT="$ANDROID_HOME"
 export ANDROID_AVD_HOME="$HOME/.android/avd"
@@ -80,7 +78,7 @@ export PAGER="less --mouse"
 export LESS="-g -i -M -R -S -w -z-4"
 
 #
-# Misc configurations
+# Miscellaneous
 #
 
 # Integrate 1Password shell plugins
