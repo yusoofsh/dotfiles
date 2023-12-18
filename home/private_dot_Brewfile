@@ -1,3 +1,4 @@
+tap "buo/cask-upgrade"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -7,8 +8,11 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "oven-sh/bun"
 tap "rsteube/tap"
+tap "str4d.xyz/rage", "https://str4d.xyz/rage"
 # C++ Common Libraries
 brew "abseil"
+# Simple, modern, secure file encryption
+brew "age"
 # Generic-purpose lossless compression algorithm by Google
 brew "brotli"
 # Library and utilities for processing GIFs
@@ -161,16 +165,12 @@ brew "corepack"
 brew "coreutils"
 # Power of curl, ease of use of httpie
 brew "curlie"
-# Command-line DNS Client for Humans
-brew "doggo"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Command-line tool to interact with exercism.io
 brew "exercism"
 # Modern, maintained replacement for ls
 brew "eza"
-# Simple, fast and user-friendly alternative to find
-brew "fd"
 # Command-line tools for fly.io services
 brew "flyctl"
 # Infamous electronic fortune-cookie generator
@@ -179,14 +179,14 @@ brew "fortune"
 brew "fzf"
 # Distributed revision control system
 brew "git"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Git extension for versioning large files
 brew "git-lfs"
 # Command-line option parsing utility
 brew "gnu-getopt"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Ping, but with a graph
@@ -215,8 +215,6 @@ brew "unibilium"
 brew "libtermkey"
 # C99 library which implements a VT220 or xterm terminal emulator
 brew "libvterm"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # High-performance theorem prover
 brew "z3"
 # Rainbows and unicorns in your console!
@@ -245,8 +243,6 @@ brew "tree-sitter"
 brew "neovim"
 # Perl compatible regular expressions library
 brew "pcre"
-# Pinentry for GPG on Mac
-brew "pinentry-mac"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Manage compile and link flags for libraries
@@ -289,8 +285,6 @@ brew "yq"
 brew "zip"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# UNIX shell (command interpreter)
-brew "zsh"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # multi-shell multi-command argument completer
@@ -341,8 +335,6 @@ cask "hiddenbar"
 cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# File archiver
-cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
 # Software for Logitech devices
