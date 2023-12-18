@@ -39,7 +39,6 @@
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
   "application.experimental.rendererProfiling": true,
-  "application.shellEnvironmentResolutionTimeout": 30,
   "audioCues.clear": "on",
   "audioCues.debouncePositionChanges": true,
   "audioCues.format": "userGesture",
@@ -116,7 +115,6 @@
   "editor.fontFamily": "Iosevka Mayukai Original, Fira Code, monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
-  "editor.fontWeight": "400",
   "editor.formatOnPaste": false,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": "active",
@@ -224,6 +222,7 @@
   "git.detectSubmodules": false,
   "git.detectSubmodulesLimit": 0,
   "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
   "git.enableStatusBarSync": false,
   "git.ignoreSubmodules": true,
   "git.mergeEditor": true,
@@ -344,7 +343,6 @@
   "markdown.extension.theming.decoration.renderHardLineBreak": true,
   "markdown.extension.theming.decoration.renderLink": true,
   "markdown.extension.theming.decoration.renderParagraph": true,
-  "markdown.preview.fontSize": 16,
   "markdown.preview.typographer": true,
   "mergeEditor.diffAlgorithm": "advanced",
   "multiDiffEditor.experimental.enabled": true,
@@ -353,6 +351,7 @@
   "notebook.stickyScroll.enabled": true,
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm.enableRunFromFolder": true,
+  "npm.packageManager": "bun",
   "npm.scriptExplorerAction": "run",
   "nxConsole.showNodeVersionOnStartup": false,
   "outline.collapseItems": "alwaysCollapse",
@@ -378,7 +377,6 @@
   "scm.countBadge": "focused",
   "scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
   "scm.experimental.showSyncView": true,
-  "scm.inputFontSize": 14,
   "scm.providerCountBadge": "auto",
   "scm.repositories.sortOrder": "name",
   "search.experimental.closedNotebookRichContentResults": true,
@@ -406,12 +404,10 @@
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.allowMnemonics": true,
-  "terminal.integrated.automationProfile.osx": {
-    "path": "zsh"
-  },
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.defaultProfile.osx": "sh",
   "terminal.integrated.enableBell": true,
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": "1"
@@ -423,6 +419,33 @@
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
   "terminal.integrated.persistentSessionScrollback": 10000,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "args": ["-l"],
+      "icon": "terminal-bash",
+      "path": "bash"
+    },
+    "fish": {
+      "args": ["-l"],
+      "path": "fish"
+    },
+    "pwsh": {
+      "icon": "terminal-powershell",
+      "path": "pwsh"
+    },
+    "sh": {
+      "args": ["-l"],
+      "path": "/bin/sh"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    },
+    "zsh": {
+      "args": ["-l"],
+      "path": "zsh"
+    }
+  },
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.sendKeybindingsToShell": true,
   "terminal.integrated.shellIntegration.suggestEnabled": true,
@@ -463,6 +486,7 @@
   "window.titleSeparator": "  ·  ",
   "workbench.accounts.experimental.showEntitlements": true,
   "workbench.cloudChanges.continueOn": "off",
+  "workbench.colorTheme": "Moonic II",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
@@ -490,7 +514,5 @@
   "zenMode.hideActivityBar": true,
   "zenMode.hideLineNumbers": true,
   "zenMode.hideStatusBar": true,
-  "zenMode.showTabs": "single",
-  "npm.packageManager": "bun",
-  "workbench.colorTheme": "Moonic II"
+  "zenMode.showTabs": "single"
 }
