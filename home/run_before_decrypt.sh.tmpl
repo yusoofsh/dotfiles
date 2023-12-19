@@ -2,5 +2,5 @@
 
 if [ ! -f "${HOME}/.config/chezmoi/.key.txt" ]; then
     mkdir -p "${HOME}/.config/chezmoi"
-    chezmoi age decrypt --output "${HOME}/.config/chezmoi/.key.txt" --passphrase "{{ .chezmoi.sourceDir }}/.key.txt.age"
+    chezmoi age decrypt --output "${HOME}/.config/chezmoi/chezmoikey.txt" --passphrase "{{ .chezmoi.sourceDir }}/.chezmoikey.txt.age"
 fi
