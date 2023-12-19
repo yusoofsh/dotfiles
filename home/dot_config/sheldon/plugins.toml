@@ -19,6 +19,12 @@ shell = "zsh"
 # [plugins.base16]
 # github = "chriskempson/base16-shell"
 
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = [
+  "fpath",
+]
+
 [plugins.fzf-zsh-plugin]
 github = "unixorn/fzf-zsh-plugin"
 

@@ -9,7 +9,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Auto start tmux
-if command -v tmux >/dev/null 2>&1 && [ -n "$PS1" ] && [ -z "$TMUX" ] && [ -z "$EMACS" ] && [ -z "$VIM" ] && [ "$VSCODE_RESOLVING_ENVIRONMENT" != "1" ]; then
+if command -v tmux >/dev/null 2>&1 && [ -n "$PS1" ] && [ "$VSCODE_RESOLVING_ENVIRONMENT" != "1" ]; then
   if [ "$TERM_PROGRAM" = "iTerm.app" ]; then
     session_name=$(printf "%s:%s" "$TTY" "$PWD" | md5sum | cut -c 1-6)
     (tmux set-option -g destroy-unattached off && tmux attach -t "$session_name" || tmux new -s "$session_name") 1>/dev/null 2>&1 && exit
@@ -17,7 +17,6 @@ if command -v tmux >/dev/null 2>&1 && [ -n "$PS1" ] && [ -z "$TMUX" ] && [ -z "$
     session_name="$(date +%s | md5sum | cut -c 1-6)"
     (tmux new -d -s "$session_name" \; set destroy-unattached on \; attach -t "$session_name") 1>/dev/null 2>&1 && exit
   fi
-
 fi
 
 #
