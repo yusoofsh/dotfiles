@@ -19,20 +19,10 @@ shell = "zsh"
 # [plugins.base16]
 # github = "chriskempson/base16-shell"
 
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
-apply = [
-  "fpath",
-]
-
-[plugins.fzf-zsh-plugin]
-github = "unixorn/fzf-zsh-plugin"
-
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 [plugins.zsh-autosuggestions.hooks]
 pre = """
-autoload -Uz compinit && compinit -D -i -u -C
 export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 """
@@ -41,8 +31,37 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 github = "marlonrichert/zsh-autocomplete"
 [plugins.zsh-autocomplete.hooks]
 pre = """
+zstyle '*:compinit' arguments -D -i -u -C
 zstyle ':autocomplete:*' delay 0.1
 """
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = [
+  "fpath",
+]
+
+[plugins.atuin]
+github = "atuinsh/atuin"
+[plugins.atuin.hooks]
+pre = """
+export ATUIN_NOBIND="true"
+"""
+post = """
+bindkey '^[[A' _atuin_search_widget
+bindkey '^[OA' _atuin_search_widget
+"""
+
+[plugins.zsh-tmux-auto-title]
+github = "mbenford/zsh-tmux-auto-title"
+[plugins.zsh-tmux-auto-title.hooks]
+pre = """
+ZSH_TMUX_AUTO_TITLE_TARGET=window
+ZSH_TMUX_AUTO_TITLE_IDLE_TEXT=shell
+"""
+
+[plugins.fzf-zsh-plugin]
+github = "unixorn/fzf-zsh-plugin"
 
 [plugins.prezto]
 github = "sorin-ionescu/prezto"
@@ -106,27 +125,8 @@ zstyle ':zephyr:plugin:editor' key-bindings 'emacs'
 zstyle ':zephyr:plugin:editor' ps-context 'yes'
 """
 
-[plugins.atuin]
-github = "atuinsh/atuin"
-[plugins.atuin.hooks]
-pre = """
-export ATUIN_NOBIND="true"
-"""
-post = """
-bindkey '^[[A' _atuin_search_widget
-bindkey '^[OA' _atuin_search_widget
-"""
-
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
-
-[plugins.zsh-tmux-auto-title]
-github = "mbenford/zsh-tmux-auto-title"
-[plugins.zsh-tmux-auto-title.hooks]
-pre = """
-ZSH_TMUX_AUTO_TITLE_TARGET=window
-ZSH_TMUX_AUTO_TITLE_IDLE_TEXT=shell
-"""
 
 [plugins.zsh-edit]
 github = "marlonrichert/zsh-edit"
