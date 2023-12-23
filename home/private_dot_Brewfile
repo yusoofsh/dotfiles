@@ -396,6 +396,7 @@ cask "vnc-viewer"
 cask "xquartz"
 mas "Actions", id: 1586435171
 mas "Amphetamine", id: 937984704
+mas "Codepoint", id: 6444068649
 mas "Command X", id: 6448461551
 mas "Craft", id: 1487937127
 mas "DaVinci Resolve", id: 571213070
@@ -429,6 +430,7 @@ vscode "bradlc.vscode-tailwindcss"
 vscode "brunnerh.file-properties-viewer"
 vscode "christian-kohler.npm-intellisense"
 vscode "codezombiech.gitignore"
+vscode "Codium.codium"
 vscode "Dart-Code.dart-code"
 vscode "dbaeumer.vscode-eslint"
 vscode "dbankier.vscode-quick-select"
