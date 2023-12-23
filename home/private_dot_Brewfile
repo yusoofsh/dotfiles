@@ -6,6 +6,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/command-not-found"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "modularml/packages"
 tap "oven-sh/bun"
 tap "rsteube/tap"
 tap "str4d.xyz/rage", "https://str4d.xyz/rage"
@@ -73,6 +74,8 @@ brew "oniguruma"
 brew "bat"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
+# Powerful, enterprise-ready, open source web server with automatic HTTPS
+brew "caddy", restart_service: true
 # Software library to render fonts
 brew "freetype"
 # XML-based font configuration API for X Windows
@@ -113,12 +116,18 @@ brew "readline"
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# GNU multiple precision arithmetic library
+brew "gmp"
 # C string library for manipulating Unicode strings
 brew "libunistring"
 # International domain name library (IDNA2008, Punycode and TR46)
 brew "libidn2"
 # HTTP/2 C Library
 brew "libnghttp2"
+# Text-based UI library
+brew "ncurses"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima", restart_service: true
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
@@ -135,8 +144,6 @@ brew "freetds"
 brew "libavif"
 # Graphics library to dynamically manipulate images
 brew "gd"
-# GNU multiple precision arithmetic library
-brew "gmp"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c"
 # Network authentication protocol
@@ -165,6 +172,12 @@ brew "corepack"
 brew "coreutils"
 # Power of curl, ease of use of httpie
 brew "curlie"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Platform keystore credential helper for Docker
+brew "docker-credential-helper"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Command-line tool to interact with exercism.io
@@ -185,6 +198,8 @@ brew "python@3.12"
 brew "git-filter-repo"
 # Git extension for versioning large files
 brew "git-lfs"
+# Audit git repos for secrets
+brew "gitleaks"
 # Command-line option parsing utility
 brew "gnu-getopt"
 # Open source programming language to build simple/reliable/efficient software
@@ -195,12 +210,12 @@ brew "gping"
 brew "graphite2"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Checks presence of various command-line tools and their versions on the path
+brew "has"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Library for interacting with JSON
 brew "jsoncpp"
-# Text-based UI library
-brew "ncurses"
 # Pager program similar to more
 brew "less"
 # CBOR protocol implementation for C and others
@@ -241,6 +256,8 @@ brew "nano"
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# PAM module for reattaching to the user's GUI (Aqua) session
+brew "pam-reattach"
 # Perl compatible regular expressions library
 brew "pcre"
 # Execute binaries from Python packages in isolated environments
@@ -285,6 +302,8 @@ brew "yq"
 brew "zip"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Modular developer CLI tool
+brew "modularml/packages/modular"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # multi-shell multi-command argument completer
@@ -297,6 +316,8 @@ cask "1password-cli"
 cask "aldente"
 # Enable Windows-like alt-tab
 cask "alt-tab"
+# Command-line tools for building and debugging Android apps
+cask "android-commandlinetools"
 # Tools for building Android applications
 cask "android-studio"
 # Multi-track audio editor and recorder
@@ -305,8 +326,8 @@ cask "audacity"
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
-# Universal database tool and SQL client
-cask "dbeaver-community"
+# Database management and analysis tool
+cask "dbvisualizer"
 # Voice and text chat software
 cask "discord"
 # Collaborative team software
@@ -347,8 +368,6 @@ cask "ngrok"
 cask "numi"
 # Open-source software for live streaming and screen recording
 cask "obs"
-# Replacement for Docker Desktop
-cask "orbstack"
 # Customize and maintain app icons
 cask "pictogram"
 # Collaboration platform for API development
@@ -423,7 +442,6 @@ vscode "esbenp.prettier-vscode"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
 vscode "fwcd.kotlin"
-vscode "GitHub.codespaces"
 vscode "GitHub.remotehub"
 vscode "GitHub.vscode-pull-request-github"
 vscode "GitLab.gitlab-workflow"
@@ -442,11 +460,12 @@ vscode "matthewpi.caddyfile-support"
 vscode "mhutchie.git-graph"
 vscode "miguelsolorio.symbols"
 vscode "mousavian.ssh-config-syntax-highlighter"
+vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode.azure-repos"
+vscode "ms-vscode.cpptools"
 vscode "ms-vscode.live-server"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
@@ -456,7 +475,6 @@ vscode "patbenatar.advanced-new-file"
 vscode "pflannery.vscode-versionlens"
 vscode "phind.phind"
 vscode "Prisma.prisma"
-vscode "raynigon.nginx-formatter"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"

@@ -6,18 +6,36 @@
 #
 
 # Intialize Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Auto start tmux
-if command -v tmux >/dev/null 2>&1 && [ -n "$PS1" ] && [ "$VSCODE_RESOLVING_ENVIRONMENT" != "1" ]; then
-  if [ "$TERM_PROGRAM" = "iTerm.app" ]; then
-    session_name=$(printf "%s:%s" "$TTY" "$PWD" | md5sum | cut -c 1-6)
-    (tmux set-option -g destroy-unattached off && tmux attach -t "$session_name" || tmux new -s "$session_name") 1>/dev/null 2>&1 && exit
-  else
-    session_name="$(date +%s | md5sum | cut -c 1-6)"
-    (tmux new -d -s "$session_name" \; set destroy-unattached on \; attach -t "$session_name") 1>/dev/null 2>&1 && exit
-  fi
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+#
+# Locale
+#
+
+export LC_ALL=${LC_ALL:-en_US.UTF-8}
+
+#
+# Browser
+#
+
+if [ "$(uname -s)" = "Darwin" ]; then
+  export BROWSER="open"
+elif [ "$(uname -s)" = "Linux" ]; then
+  export BROWSER="xdg-open"
+else
+  export BROWSER="start"
+fi
+
+#
+# Editors
+#
+
+export EDITOR=${EDITOR:-micro}
+export VISUAL="code --wait"
+export PAGER="less --mouse"
+export LESS="-g -i -M -R -S -w -z-4"
 
 #
 # Paths
@@ -40,6 +58,9 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 export PATH="$ANDROID_SDK_ROOT/tools:$PATH"
 
+export MODULAR_HOME="/Users/yusoofsh/.modular"
+export PATH="/Users/yusoofsh/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+
 export CARGOPATH="$HOME/.cargo"
 export PATH="$CARGOPATH/bin:$PATH"
 
@@ -54,27 +75,6 @@ export PATH="$DOCKER_HOME/bin:$PATH"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-#
-# Browser
-#
-
-if [ "$(uname -s)" = "Darwin" ]; then
-  export BROWSER="open"
-elif [ "$(uname -s)" = "Linux" ]; then
-  export BROWSER="xdg-open"
-else
-  export BROWSER="start"
-fi
-
-#
-# Editors
-#
-
-export EDITOR="micro"
-export VISUAL="code --wait"
-export PAGER="less --mouse"
-export LESS="-g -i -M -R -S -w -z-4"
 
 #
 # Miscellaneous

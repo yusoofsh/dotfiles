@@ -16,52 +16,33 @@ shell = "zsh"
 
 # For example:
 #
-# [plugins.base16]
-# github = "chriskempson/base16-shell"
+# [plugins.zsh-tmux-auto-title]
+# github = "mbenford/zsh-tmux-auto-title"
+# hooks.pre = """
+# ZSH_TMUX_AUTO_TITLE_TARGET=window
+# ZSH_TMUX_AUTO_TITLE_IDLE_TEXT=shell
+# """
+
+[plugins.pre]
+inline = """
+autoload -Uz compinit && compinit -D -i -u -C
+"""
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
-[plugins.zsh-autosuggestions.hooks]
-pre = """
+hooks.pre = """
 export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 """
 
 [plugins.zsh-autocomplete]
 github = "marlonrichert/zsh-autocomplete"
-[plugins.zsh-autocomplete.hooks]
-pre = """
-zstyle '*:compinit' arguments -D -i -u -C
+hooks.pre = """
 zstyle ':autocomplete:*' delay 0.1
 """
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
-apply = [
-  "fpath",
-]
-
-[plugins.atuin]
-github = "atuinsh/atuin"
-[plugins.atuin.hooks]
-pre = """
-export ATUIN_NOBIND="true"
-"""
-post = """
-bindkey '^[[A' _atuin_search_widget
-bindkey '^[OA' _atuin_search_widget
-"""
-
-[plugins.zsh-tmux-auto-title]
-github = "mbenford/zsh-tmux-auto-title"
-[plugins.zsh-tmux-auto-title.hooks]
-pre = """
-ZSH_TMUX_AUTO_TITLE_TARGET=window
-ZSH_TMUX_AUTO_TITLE_IDLE_TEXT=shell
-"""
-
-[plugins.fzf-zsh-plugin]
-github = "unixorn/fzf-zsh-plugin"
 
 [plugins.prezto]
 github = "sorin-ionescu/prezto"
@@ -74,7 +55,6 @@ use = [
 github = "ohmyzsh/ohmyzsh"
 use = [
   "lib/correction.zsh",
-  "plugins/command-not-found/command-not-found.plugin.zsh",
   "plugins/common-aliases/common-aliases.plugin.zsh",
   "plugins/gnu-utils/gnu-utils.plugin.zsh",
   "plugins/dircycle/dircycle.plugin.zsh",
@@ -85,8 +65,7 @@ use = [
   "plugins/xcode/xcode.plugin.zsh",
   "plugins/starship/starship.plugin.zsh",
 ]
-[plugins.ohmyzsh.hooks]
-pre = """
+hooks.pre = """
 export ENABLE_CORRECTION=true
 export SPROMPT="zsh: correct %F{1}%R%f to %F{2}%r%f [nyae]? "
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
@@ -95,7 +74,7 @@ export HOMEBREW_UNINSTALL_DEPENDENCIES=1
 export HOMEBREW_NO_ENV_HINTS=1
 zstyle ':omz:plugins:iterm2' shell-integration yes
 """
-post = """
+hooks.post = """
 unsetopt correct_all
 setopt correct
 """
@@ -111,27 +90,42 @@ use = [
   "plugins/macos/macos.plugin.zsh",
   "plugins/utility/utility.plugin.zsh",
 ]
-[plugins.zephyr.hooks]
-pre = """
-export HISTFILE="$HOME/.zsh_history"
-zstyle ':zephyr:*:*' color 'yes'
-zstyle ':zephyr:plugin:terminal' auto-title 'yes'
-zstyle ':zephyr:plugin:terminal:window-title' format '%s'
-zstyle ':zephyr:plugin:terminal:tab-title' format '%s'
-zstyle ':zephyr:plugin:terminal:multiplexer-title' format '%s'
-zstyle ':zephyr:plugin:history:alias' skip 'yes'
-zstyle ':zephyr:plugin:directory:alias' skip 'yes'
-zstyle ':zephyr:plugin:editor' key-bindings 'emacs'
-zstyle ':zephyr:plugin:editor' ps-context 'yes'
+hooks.pre = """
+zstyle ':zephyr:*:*' color yes
+zstyle ':zephyr:plugin:terminal' auto-title yes
+zstyle ':zephyr:plugin:history:alias' skip yes
+zstyle ':zephyr:plugin:directory:alias' skip yes
+zstyle ':zephyr:plugin:editor' key-bindings emacs
+zstyle ':zephyr:plugin:editor' ps-context yes
 """
 
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
+[plugins.fzf-zsh-plugin]
+github = "unixorn/fzf-zsh-plugin"
+
 [plugins.zsh-edit]
 github = "marlonrichert/zsh-edit"
+
+[plugins.zsh-you-should-use]
+github = "MichaelAquilina/zsh-you-should-use"
+hooks.pre = "export YSU_MODE=ALL"
+
+[plugins.atuin]
+github = "atuinsh/atuin"
+hooks.pre = """
+export ATUIN_NOBIND="true"
+"""
+hooks.post = """
+bindkey '^[[A' _atuin_search_widget
+bindkey '^[OA' _atuin_search_widget
+"""
 
 [plugins.post]
 inline = """
 bindkey '\t' autosuggest-accept
+source <(carapace _carapace zsh)
+source <(colima completion zsh)
+[ -f "$HOME/.orbstack/shell/init.zsh" ] && source "$HOME/.orbstack/shell/init.zsh"
 """

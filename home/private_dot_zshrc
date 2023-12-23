@@ -5,12 +5,4 @@
 # See $HOME/.config/sheldon/plugins.toml
 #
 
-eval "$(sheldon source)" >/dev/null 2>&1
-
-#
-# Miscellaneous
-#
-
-source <(carapace _carapace zsh)
-
-[ -f "$HOME/.orbstack/shell/init.zsh" ] && source "$HOME/.orbstack/shell/init.zsh"
+eval "$(sheldon source)"

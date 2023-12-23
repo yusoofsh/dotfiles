@@ -13,4 +13,4 @@ echo "Updating TLDR caches..."
 tldr --update
 
 echo "Re-adding Chezmoi dotfiles..."
-chezmoi re-add --force
+chezmoi init && chezmoi re-add --force
