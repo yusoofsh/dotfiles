@@ -278,8 +278,12 @@ brew "reattach-to-user-namespace"
 brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
+# Rust port of Shadowsocks
+brew "shadowsocks-rust"
 # Fast, configurable, shell plugin manager
 brew "sheldon"
+# SMART hard drive monitoring
+brew "smartmontools"
 # Cross-shell prompt for astronauts
 brew "starship"
 # High-performance system programming language
