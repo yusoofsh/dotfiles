@@ -127,7 +127,7 @@ brew "libnghttp2"
 # Text-based UI library
 brew "ncurses"
 # Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima", restart_service: true
+brew "colima"
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
@@ -162,12 +162,6 @@ brew "tidy-html5"
 brew "php"
 # Dependency Manager for PHP
 brew "composer"
-# Multi-platform support library with a focus on asynchronous I/O
-brew "libuv"
-# Platform built on V8 to build network applications
-brew "node"
-# Package acting as bridge between Node projects and their package managers
-brew "corepack"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Power of curl, ease of use of httpie
@@ -228,6 +222,8 @@ brew "libressl"
 brew "unibilium"
 # Library for processing keyboard entry from the terminal
 brew "libtermkey"
+# Multi-platform support library with a focus on asynchronous I/O
+brew "libuv"
 # C99 library which implements a VT220 or xterm terminal emulator
 brew "libvterm"
 # High-performance theorem prover
@@ -298,6 +294,8 @@ brew "terminal-notifier"
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
+# JavaScript toolchain manager for reproducible environments
+brew "volta"
 # Internet file retriever
 brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -332,8 +330,6 @@ cask "betterdisplay"
 cask "coconutbattery"
 # Database management and analysis tool
 cask "dbvisualizer"
-# Voice and text chat software
-cask "discord"
 # Collaborative team software
 cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
@@ -420,6 +416,7 @@ mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "Termius", id: 1176074088
 mas "TestFlight", id: 899247664
+mas "uBlacklist for Safari", id: 1547912640
 mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
@@ -429,12 +426,12 @@ vscode "alyxz.icons-carbon-tweaked"
 vscode "arcanis.vscode-zipfs"
 vscode "astro-build.astro-vscode"
 vscode "bennycode.sort-everything"
+vscode "biomejs.biome-nightly"
 vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "brunnerh.file-properties-viewer"
 vscode "christian-kohler.npm-intellisense"
 vscode "codezombiech.gitignore"
-vscode "Codium.codium"
 vscode "Dart-Code.dart-code"
 vscode "dbaeumer.vscode-eslint"
 vscode "dbankier.vscode-quick-select"
@@ -481,6 +478,7 @@ vscode "patbenatar.advanced-new-file"
 vscode "pflannery.vscode-versionlens"
 vscode "phind.phind"
 vscode "Prisma.prisma"
+vscode "quick-lint.quick-lint-js"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"

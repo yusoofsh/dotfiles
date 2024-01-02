@@ -14,7 +14,7 @@ fi
 # Locale
 #
 
-export LC_ALL=${LC_ALL:-en_US.UTF-8}
+export LC_ALL="${LC_ALL:-en_US.UTF-8}"
 
 #
 # Browser
@@ -32,7 +32,7 @@ fi
 # Editors
 #
 
-export EDITOR=${EDITOR:-micro}
+export EDITOR="${EDITOR:-micro}"
 export VISUAL="code --wait"
 export PAGER="less --mouse"
 export LESS="-g -i -M -R -S -w -z-4"
@@ -76,6 +76,9 @@ export PATH="$DOCKER_HOME/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 #
 # Miscellaneous
 #
@@ -86,6 +89,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export VOLTA_FEATURE_PNPM=1
 
 #
 # Aliases

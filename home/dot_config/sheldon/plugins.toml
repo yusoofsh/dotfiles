@@ -28,6 +28,9 @@ inline = """
 autoload -Uz compinit && compinit -D -i -u -C
 """
 
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 hooks.pre = """
@@ -40,9 +43,6 @@ github = "marlonrichert/zsh-autocomplete"
 hooks.pre = """
 zstyle ':autocomplete:*' delay 0.1
 """
-
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
 
 [plugins.prezto]
 github = "sorin-ionescu/prezto"

@@ -1,134 +1,126 @@
 [user]
-	name = Yusoof Moh
+  name = Yusoof Moh
 
 [color "branch"]
-	current = yellow bold reverse
-	local = yellow bold
-	remote = green bold
+  current = yellow bold reverse
+  local = yellow bold
+  remote = green bold
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 
 [color "status"]
-	added = green
-	changed = yellow
-	untracked = cyan
+  added = green
+  changed = yellow
+  untracked = cyan
 
 [color]
-	ui = auto
-	status = auto
-	branch = auto
-	diff = auto
+  ui = auto
+  status = auto
+  branch = auto
+  diff = auto
 
 [core]
-	pager = bat
-	whitespace = trailing-space
-	autocrlf = input
-	longpaths = true
-	excludesFile = ~/.gitignore
-	editor = code --wait
-	quotepath = false
-	ignoreCase = false
+  pager = bat
+  whitespace = trailing-space
+  autocrlf = input
+  longpaths = true
+  excludesFile = ~/.gitignore
+  editor = code --wait
+  quotepath = false
+  ignoreCase = false
 
 [commit]
-	gpgSign = true
+  gpgSign = true
 
 [credential]
-	autoDetectTimeout = 500
-	guiPrompt = false
-	cacheOptions = --timeout 1200
-	helper = /usr/local/share/gcm-core/git-credential-manager
+  autoDetectTimeout = 500
+  guiPrompt = false
+  cacheOptions = --timeout 1200
+  helper = /usr/local/share/gcm-core/git-credential-manager
 
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+  useHttpPath = true
 
 [diff]
-	mnemonicPrefix = true
-	renames = true
-	wordRegex = .
-	submodule = log
+  mnemonicPrefix = true
+  renames = true
+  wordRegex = .
+  submodule = log
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [fetch]
-	recurseSubmodules = on-demand
-	prune = true
+  recurseSubmodules = on-demand
+  prune = true
 
 [gitflow "branch"]
-	master = main
-	develop = dev
+  master = main
+  develop = dev
 
 [gitflow "prefix"]
-	feature = feature/
-	bugfix = bugfix/
-	release = release/
-	hotfix = hotfix/
-	support = support/
+  feature = feature/
+  bugfix = bugfix/
+  release = release/
+  hotfix = hotfix/
+  support = support/
 
 [grep]
-	break = true
-	heading = true
-	lineNumber = true
-	extendedRegexp = true
+  break = true
+  heading = true
+  lineNumber = true
+  extendedRegexp = true
 
 [help]
-	autoCorrect = 20
+  autoCorrect = 20
 
 [init]
-	defaultBranch = main
-	templateDir = /Users/yusoofsh/.git-templates/git-secrets
+  defaultBranch = main
 
 [log]
-	abbrevCommit = true
-	follow = true
-	decorate = true
+  abbrevCommit = true
+  follow = true
+  decorate = true
 
 [merge]
-	tool = code --wait
+  tool = code --wait
 
 [mergetool "code"]
-	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 
 [mergetool]
-	keepBackup = true
-	keepTemporaries = false
-	writeToTemp = true
-	prompt = false
+  keepBackup = true
+  keepTemporaries = false
+  writeToTemp = true
+  prompt = false
 
 [pull]
-	ff = only
+  ff = only
 
 [push]
-	default = matching
-	followTags = true
-	autoSetupRemote = true
+  default = matching
+  followTags = true
+  autoSetupRemote = true
 
 [rebase]
-	autoSquash = true
-	updateRefs = true
+  autoSquash = true
+  updateRefs = true
 
 [status]
-	submoduleSummary = true
-	showUntrackedFiles = all
+  submoduleSummary = true
+  showUntrackedFiles = all
 
 [tag]
-	sort = version:refname
-	gpgSign = true
+  sort = version:refname
+  gpgSign = true
 
-[includeIf "gitdir:~/Documents/Division/Open/Code/"]
-	path = ~/Documents/Division/Open/Code/.gitconfig
+[includeIf "gitdir:~/Documents/Live/"]
+  path = ~/Documents/Live/.gitconfig
 
-[includeIf "gitdir:~/Documents/Division/Office/CloudThought/"]
-	path = ~/Documents/Division/Office/CloudThought/.gitconfig
-[secrets]
-	providers = git secrets --aws-provider
-	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
-	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
-	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
-	allowed = AKIAIOSFODNN7EXAMPLE
-	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[includeIf "gitdir:~/Documents/Office/CT/Spacetoon/"]
+  path = ~/Documents/Office/CT/Spacetoon/.gitconfig

@@ -6,6 +6,9 @@ brew update && brew upgrade && brew cleanup && brew bundle dump --global --descr
 echo "Updating App Store applications..."
 mas upgrade
 
+echo "Updating Volta packages..."
+volta install node@latest pnpm@latest
+
 echo "Updating Sheldon plugins..."
 sheldon lock --update
 

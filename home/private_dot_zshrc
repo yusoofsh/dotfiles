@@ -6,3 +6,7 @@
 #
 
 eval "$(sheldon source)"
+unalias z
+function z() {
+  __zoxide_z "$@"
+}
