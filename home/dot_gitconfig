@@ -119,8 +119,8 @@
   sort = version:refname
   gpgSign = true
 
-[includeIf "gitdir:~/Documents/Live/"]
-  path = ~/Documents/Live/.gitconfig
+[gpg]
+  format = ssh
 
-[includeIf "gitdir:~/Documents/Office/CT/Spacetoon/"]
-  path = ~/Documents/Office/CT/Spacetoon/.gitconfig
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
