@@ -127,7 +127,7 @@ brew "libnghttp2"
 # Text-based UI library
 brew "ncurses"
 # Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
+brew "colima", restart_service: true
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
@@ -296,6 +296,8 @@ brew "tmux"
 brew "tpm"
 # JavaScript toolchain manager for reproducible environments
 brew "volta"
+# Execute commands when watched files change
+brew "watchexec"
 # Internet file retriever
 brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
