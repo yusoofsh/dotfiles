@@ -127,7 +127,7 @@ brew "libnghttp2"
 # Text-based UI library
 brew "ncurses"
 # Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima", restart_service: true
+brew "colima"
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
