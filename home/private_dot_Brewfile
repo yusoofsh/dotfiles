@@ -110,8 +110,6 @@ brew "cairo"
 brew "chezmoi"
 # YAML Parser
 brew "libyaml"
-# Library for command-line editing
-brew "readline"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Dependency manager for Cocoa projects
@@ -154,6 +152,8 @@ brew "libpq"
 brew "libsodium"
 # C library for reading, creating, and modifying zip archives
 brew "libzip"
+# Library for command-line editing
+brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
 # Granddaddy of HTML tools, with support for modern standards
@@ -408,6 +408,7 @@ mas "Equinox", id: 1591510203
 mas "Ghostery – Privacy Ad Blocker", id: 1436953057
 mas "Keynote", id: 409183694
 mas "MenubarX", id: 1575588022
+mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "One Thing", id: 1604176982
 mas "Pages", id: 409201541
@@ -496,7 +497,7 @@ vscode "tonybaloney.vscode-pets"
 vscode "usernamehw.errorlens"
 vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "vknabel.vscode-apple-swift-format"
-vscode "yoavbls.pretty-ts-errors"
+vscode "YoavBls.pretty-ts-errors"
 vscode "yusoofsh.moonic"
 vscode "yy0931.gitconfig-lsp"
 vscode "yy0931.save-as-root"
