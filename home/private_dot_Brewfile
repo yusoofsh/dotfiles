@@ -108,6 +108,8 @@ brew "pixman"
 brew "cairo"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # YAML Parser
 brew "libyaml"
 # Powerful, clean, object-oriented scripting language
@@ -184,6 +186,8 @@ brew "flyctl"
 brew "fortune"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Interpreted, interactive, object-oriented programming language
@@ -194,6 +198,8 @@ brew "git-filter-repo"
 brew "git-lfs"
 # Audit git repos for secrets
 brew "gitleaks"
+# Open-source GitLab command-line tool
+brew "glab"
 # Command-line option parsing utility
 brew "gnu-getopt"
 # Open source programming language to build simple/reliable/efficient software
