@@ -168,6 +168,8 @@ brew "composer"
 brew "coreutils"
 # Power of curl, ease of use of httpie
 brew "curlie"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Isolated development environments using Docker
@@ -444,6 +446,7 @@ vscode "codezombiech.gitignore"
 vscode "Dart-Code.dart-code"
 vscode "dbaeumer.vscode-eslint"
 vscode "dbankier.vscode-quick-select"
+vscode "denoland.vscode-deno"
 vscode "devMike.mikrotik-routeros-script"
 vscode "dotenv.dotenv-vscode"
 vscode "DotJoshJohnson.xml"

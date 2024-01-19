@@ -55,7 +55,6 @@ use = [
 github = "ohmyzsh/ohmyzsh"
 use = [
   "lib/correction.zsh",
-  "plugins/common-aliases/common-aliases.plugin.zsh",
   "plugins/gnu-utils/gnu-utils.plugin.zsh",
   "plugins/dircycle/dircycle.plugin.zsh",
   "plugins/zoxide/zoxide.plugin.zsh",
@@ -126,6 +125,4 @@ bindkey '^[OA' _atuin_search_widget
 inline = """
 bindkey '\t' autosuggest-accept
 source <(carapace _carapace zsh)
-source <(colima completion zsh)
-[ -f "$HOME/.orbstack/shell/init.zsh" ] && source "$HOME/.orbstack/shell/init.zsh"
 """
