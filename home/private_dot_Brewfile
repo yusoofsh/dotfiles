@@ -386,8 +386,6 @@ cask "postman"
 cask "raycast"
 # Screenshot measurement and annotation tool
 cask "shottr"
-# Displays all open files and sockets in use by all running processes
-cask "sloth"
 # Video game digital distribution service
 cask "steam"
 # Replacement for RCDefaultApps, written in Swift
@@ -406,17 +404,14 @@ cask "vnc-viewer"
 cask "xquartz"
 mas "Actions", id: 1586435171
 mas "Amphetamine", id: 937984704
-mas "Codepoint", id: 6444068649
 mas "Command X", id: 6448461551
 mas "Craft", id: 1487937127
 mas "DaVinci Resolve", id: 571213070
 mas "Developer", id: 640199958
-mas "Disk Speed Test", id: 425264550
 mas "Equinox", id: 1591510203
 mas "Ghostery – Privacy Ad Blocker", id: 1436953057
 mas "Keynote", id: 409183694
 mas "MenubarX", id: 1575588022
-mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "One Thing", id: 1604176982
 mas "Pages", id: 409201541
