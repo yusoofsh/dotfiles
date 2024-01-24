@@ -422,8 +422,8 @@ mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "Termius", id: 1176074088
 mas "TestFlight", id: 899247664
-mas "uBlacklist for Safari", id: 1547912640
 mas "Velja", id: 1607635845
+mas "Wappalyzer - Technology profiler", id: 1520333300
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 mas "‎WhatsApp", id: 310633997
@@ -455,6 +455,7 @@ vscode "fwcd.kotlin"
 vscode "GitHub.remotehub"
 vscode "GitHub.vscode-pull-request-github"
 vscode "GitLab.gitlab-workflow"
+vscode "gitpod.gitpod-desktop"
 vscode "golang.go"
 vscode "Goopware.raythis"
 vscode "GraphQL.vscode-graphql-syntax"
