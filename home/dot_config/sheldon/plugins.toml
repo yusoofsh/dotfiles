@@ -47,7 +47,6 @@ zstyle ':autocomplete:*' delay 0.1
 [plugins.prezto]
 github = "sorin-ionescu/prezto"
 use = [
-  "modules/environment/init.zsh",
   "modules/spectrum/init.zsh",
 ]
 
@@ -80,15 +79,6 @@ setopt correct
 
 [plugins.zephyr]
 github = "mattmc3/zephyr"
-use = [
-  "plugins/color/color.plugin.zsh",
-  "plugins/clipboard/clipboard.plugin.zsh",
-  "plugins/directory/directory.plugin.zsh",
-  "plugins/history/history.plugin.zsh",
-  "plugins/terminal/terminal.plugin.zsh",
-  "plugins/macos/macos.plugin.zsh",
-  "plugins/utility/utility.plugin.zsh",
-]
 hooks.pre = """
 zstyle ':zephyr:*:*' color yes
 zstyle ':zephyr:plugin:terminal' auto-title yes
@@ -111,18 +101,12 @@ github = "marlonrichert/zsh-edit"
 github = "MichaelAquilina/zsh-you-should-use"
 hooks.pre = "export YSU_MODE=ALL"
 
-[plugins.atuin]
-github = "atuinsh/atuin"
-hooks.pre = """
-export ATUIN_NOBIND="true"
-"""
-hooks.post = """
-bindkey '^[[A' _atuin_search_widget
-bindkey '^[OA' _atuin_search_widget
-"""
-
 [plugins.post]
 inline = """
+export ATUIN_NOBIND="true"
+source <(atuin init zsh)
+bindkey '^[[A' _atuin_search_widget
+bindkey '^[OA' _atuin_search_widget
 bindkey '\t' autosuggest-accept
 source <(carapace _carapace zsh)
 """
