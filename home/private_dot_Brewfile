@@ -419,13 +419,11 @@ mas "Pandan", id: 1569600264
 mas "Playgrounds", id: 1496833156
 mas "Shareful", id: 1522267256
 mas "Slack", id: 803453959
-mas "Telegram", id: 747648890
 mas "Termius", id: 1176074088
 mas "TestFlight", id: 899247664
 mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
-mas "‎WhatsApp", id: 310633997
 vscode "ahmadalli.vscode-nginx-conf"
 vscode "alyxz.icons-carbon-tweaked"
 vscode "arcanis.vscode-zipfs"
