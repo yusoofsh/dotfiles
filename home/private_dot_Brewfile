@@ -336,6 +336,8 @@ cask "android-studio"
 cask "arc"
 # Multi-track audio editor and recorder
 cask "audacity"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
 # Display management tool
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
