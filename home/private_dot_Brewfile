@@ -75,7 +75,7 @@ brew "bat"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
-brew "caddy", restart_service: true
+brew "caddy"
 # Software library to render fonts
 brew "freetype"
 # XML-based font configuration API for X Windows
@@ -127,7 +127,7 @@ brew "libnghttp2"
 # Text-based UI library
 brew "ncurses"
 # Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima", restart_service: true
+brew "colima"
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
@@ -336,8 +336,6 @@ cask "android-studio"
 cask "arc"
 # Multi-track audio editor and recorder
 cask "audacity"
-# Tool to flash OS images to SD cards & USB drives
-cask "balenaetcher"
 # Display management tool
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
@@ -472,6 +470,7 @@ vscode "mhutchie.git-graph"
 vscode "miguelsolorio.symbols"
 vscode "mousavian.ssh-config-syntax-highlighter"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
