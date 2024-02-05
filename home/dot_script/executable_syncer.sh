@@ -9,6 +9,9 @@ mas upgrade
 echo "Updating Volta packages..."
 volta install node@latest pnpm@latest
 
+echo "Updating Visual Studio Code extensions..."
+code --update-extensions
+
 echo "Updating Sheldon plugins..."
 sheldon lock --update
 
