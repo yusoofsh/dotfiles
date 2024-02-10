@@ -77,7 +77,7 @@
   extendedRegexp = true
 
 [help]
-  autoCorrect = 20
+	autoCorrect = prompt
 
 [init]
   defaultBranch = main
