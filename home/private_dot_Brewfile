@@ -380,7 +380,7 @@ cask "ngrok"
 cask "numi"
 # Open-source software for live streaming and screen recording
 cask "obs"
-# Customize and maintain app icons
+# Customise and maintain app icons
 cask "pictogram"
 # Control your tools with a few keystrokes
 cask "raycast"
