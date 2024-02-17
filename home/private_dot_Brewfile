@@ -326,8 +326,6 @@ cask "1password-beta"
 cask "1password-cli"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
-# Enable Windows-like alt-tab
-cask "alt-tab"
 # Command-line tools for building and debugging Android apps
 cask "android-commandlinetools"
 # Tools for building Android applications
