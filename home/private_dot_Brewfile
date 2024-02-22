@@ -360,6 +360,8 @@ cask "git-credential-manager"
 cask "grammarly-desktop"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
+# Open-source video transcoder
+cask "handbrake"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Free and open-source media player
