@@ -84,6 +84,12 @@ brew "fontconfig"
 brew "gettext"
 # Perl compatible regular expressions library with a new API
 brew "pcre2"
+# Library for command-line editing
+brew "readline"
+# Command-line interface for SQLite
+brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Core application library for C
 brew "glib"
 # X.Org: Protocol Headers
@@ -154,10 +160,6 @@ brew "libpq"
 brew "libsodium"
 # C library for reading, creating, and modifying zip archives
 brew "libzip"
-# Library for command-line editing
-brew "readline"
-# Command-line interface for SQLite
-brew "sqlite"
 # Granddaddy of HTML tools, with support for modern standards
 brew "tidy-html5"
 # General-purpose scripting language
@@ -192,8 +194,6 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Quickly rewrite git repository history
 brew "git-filter-repo"
 # Git extension for versioning large files
@@ -338,8 +338,8 @@ cask "audacity"
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
-# Database management and analysis tool
-cask "dbvisualizer"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 # Collaborative team software
 cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
@@ -380,6 +380,8 @@ cask "ngrok"
 cask "numi"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# Client program for the OpenVPN Access Server
+cask "openvpn-connect"
 # Customise and maintain app icons
 cask "pictogram"
 # Control your tools with a few keystrokes
