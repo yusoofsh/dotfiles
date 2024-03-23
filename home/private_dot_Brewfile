@@ -340,8 +340,6 @@ cask "betterdisplay"
 cask "coconutbattery"
 # Universal database tool and SQL client
 cask "dbeaver-community"
-# Collaborative team software
-cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 # Neutral programming typeface
@@ -356,8 +354,6 @@ cask "font-inter"
 cask "font-victor-mono"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
-# Grammarly for desktop
-cask "grammarly-desktop"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
 # Open-source video transcoder
