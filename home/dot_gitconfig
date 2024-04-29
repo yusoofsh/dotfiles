@@ -41,11 +41,8 @@
   autoDetectTimeout = 500
   guiPrompt = false
   cacheOptions = --timeout 1200
-  helper = /usr/local/share/gcm-core/git-credential-manager
-
-[credential "https://dev.azure.com"]
-  useHttpPath = true
-
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [diff]
   mnemonicPrefix = true
   renames = true
@@ -127,3 +124,5 @@
   allowedSignersFile = ~/.config/git/allowed_signers
 [pull]
 	ff = only
+[credential "https://dev.azure.com"]
+	useHttpPath = true

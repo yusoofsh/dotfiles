@@ -28,6 +28,9 @@ inline = """
 autoload -Uz compinit && compinit -D -i -u -C
 """
 
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
@@ -87,9 +90,6 @@ zstyle ':zephyr:plugin:directory:alias' skip yes
 zstyle ':zephyr:plugin:editor' key-bindings emacs
 zstyle ':zephyr:plugin:editor' ps-context yes
 """
-
-[plugins.fast-syntax-highlighting]
-github = "zdharma-continuum/fast-syntax-highlighting"
 
 [plugins.fzf-zsh-plugin]
 github = "unixorn/fzf-zsh-plugin"
