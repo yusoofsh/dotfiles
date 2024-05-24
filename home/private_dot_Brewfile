@@ -122,18 +122,12 @@ brew "libyaml"
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# GNU multiple precision arithmetic library
-brew "gmp"
 # C string library for manipulating Unicode strings
 brew "libunistring"
 # International domain name library (IDNA2008, Punycode and TR46)
 brew "libidn2"
 # HTTP/2 C Library
 brew "libnghttp2"
-# Text-based UI library
-brew "ncurses"
-# Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
 # Open source suite of directory software
 brew "openldap"
 # Tool for downloading RTMP streaming media
@@ -150,6 +144,8 @@ brew "freetds"
 brew "libavif"
 # Graphics library to dynamically manipulate images
 brew "gd"
+# GNU multiple precision arithmetic library
+brew "gmp"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c"
 # Network authentication protocol
@@ -218,6 +214,8 @@ brew "has"
 brew "jq"
 # Library for interacting with JSON
 brew "jsoncpp"
+# Text-based UI library
+brew "ncurses"
 # Pager program similar to more
 brew "less"
 # CBOR protocol implementation for C and others
