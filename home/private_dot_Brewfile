@@ -370,6 +370,8 @@ cask "iterm2"
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
+# Screen and video recording software
+cask "loom"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Reverse proxy, secure introspectable tunnels to localhost
@@ -501,6 +503,7 @@ vscode "tommasov.hosts"
 vscode "tonybaloney.vscode-pets"
 vscode "usernamehw.errorlens"
 vscode "visualstudioexptteam.vscodeintellicode"
+vscode "visualstudioexptteam.vscodeintellicode-completions"
 vscode "vknabel.vscode-apple-swift-format"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yusoofsh.moonic"
