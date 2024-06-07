@@ -336,8 +336,6 @@ cask "android-studio"
 cask "arc"
 # Multi-track audio editor and recorder
 cask "audacity"
-# Planning and prototyping tool for developers
-cask "axure-rp"
 # Display management tool
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
