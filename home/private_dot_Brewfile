@@ -342,6 +342,8 @@ cask "betterdisplay"
 cask "coconutbattery"
 # Universal database tool and SQL client
 cask "dbeaver-community"
+# Collaborative team software
+cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 # Neutral programming typeface
@@ -352,6 +354,7 @@ cask "font-fira-code"
 cask "font-geist"
 # Variable font designed for display
 cask "font-inter"
+cask "font-space-grotesk"
 # Monospaced font with cursive italics and programming symbol ligatures
 cask "font-victor-mono"
 # Cross-platform Git credential storage for multiple hosting providers
