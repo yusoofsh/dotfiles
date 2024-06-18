@@ -14,25 +14,12 @@ shell = "zsh"
 
 [plugins]
 
-# For example:
-#
-# [plugins.zsh-tmux-auto-title]
-# github = "mbenford/zsh-tmux-auto-title"
-# hooks.pre = """
-# ZSH_TMUX_AUTO_TITLE_TARGET=window
-# ZSH_TMUX_AUTO_TITLE_IDLE_TEXT=shell
-# """
-
 [plugins.pre]
 inline = """
-autoload -Uz compinit && compinit -D -i -u -C
 """
 
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
-
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
@@ -41,9 +28,13 @@ export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 """
 
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
 [plugins.zsh-autocomplete]
 github = "marlonrichert/zsh-autocomplete"
 hooks.pre = """
+zstyle '*:compinit' arguments -D -i -u -C -w
 zstyle ':autocomplete:*' delay 0.1
 """
 
