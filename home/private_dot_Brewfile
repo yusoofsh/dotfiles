@@ -7,6 +7,7 @@ tap "homebrew/command-not-found"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "modularml/packages"
+tap "mrkai77/cask"
 tap "oven-sh/bun"
 tap "rsteube/tap"
 tap "str4d.xyz/rage", "https://str4d.xyz/rage"
@@ -346,16 +347,11 @@ cask "dbeaver-community"
 cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
-# Neutral programming typeface
 cask "font-commit-mono"
-# Free monospaced font with programming ligatures
 cask "font-fira-code"
-# Sans-serif typeface
 cask "font-geist"
-# Variable font designed for display
 cask "font-inter"
 cask "font-space-grotesk"
-# Monospaced font with cursive italics and programming symbol ligatures
 cask "font-victor-mono"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
@@ -431,7 +427,6 @@ mas "Termius", id: 1176074088
 mas "TestFlight", id: 899247664
 mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
 vscode "ahmadalli.vscode-nginx-conf"
 vscode "alyxz.icons-carbon-tweaked"
 vscode "arcanis.vscode-zipfs"
