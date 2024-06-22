@@ -33,6 +33,7 @@
   editor = code --wait
   quotepath = false
   ignoreCase = false
+	fsmonitor = true
 
 [commit]
   gpgSign = true
@@ -149,3 +150,9 @@
 	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/zsh-users/zsh-autosuggestions
 	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/zsh-users/zsh-completions
 	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/zsh-users/~zsh-completions
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
