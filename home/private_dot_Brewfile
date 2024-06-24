@@ -341,8 +341,6 @@ cask "audacity"
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
-# Universal database tool and SQL client
-cask "dbeaver-community"
 # Collaborative team software
 cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
@@ -389,6 +387,8 @@ cask "shottr"
 cask "steam"
 # Replacement for RCDefaultApps, written in Swift
 cask "swiftdefaultappsprefpane"
+# Native GUI tool for relational databases
+cask "tableplus"
 # Mesh VPN based on Wireguard
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -407,26 +407,6 @@ cask "whisky"
 cask "xquartz"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Actions", id: 1586435171
-mas "Amphetamine", id: 937984704
-mas "Command X", id: 6448461551
-mas "Craft", id: 1487937127
-mas "Developer", id: 640199958
-mas "Equinox", id: 1591510203
-mas "F5Access", id: 1243219105
-mas "Ghostery – Privacy Ad Blocker", id: 1436953057
-mas "Keynote", id: 409183694
-mas "MenubarX", id: 1575588022
-mas "Numbers", id: 409203825
-mas "One Thing", id: 1604176982
-mas "Pages", id: 409201541
-mas "Pandan", id: 1569600264
-mas "Playgrounds", id: 1496833156
-mas "Shareful", id: 1522267256
-mas "Termius", id: 1176074088
-mas "TestFlight", id: 899247664
-mas "Velja", id: 1607635845
-mas "WireGuard", id: 1451685025
 vscode "ahmadalli.vscode-nginx-conf"
 vscode "alyxz.icons-carbon-tweaked"
 vscode "arcanis.vscode-zipfs"
@@ -483,7 +463,6 @@ vscode "nisanthchunduru.copy-filepath-with-line-number"
 vscode "nrwl.angular-console"
 vscode "patbenatar.advanced-new-file"
 vscode "pflannery.vscode-versionlens"
-vscode "phind.phind"
 vscode "prisma.prisma"
 vscode "quick-lint.quick-lint-js"
 vscode "redhat.java"
