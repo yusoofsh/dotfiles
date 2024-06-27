@@ -1,10 +1,5 @@
 {
-  "analyticsEnabled": false,
-  "memory.showChart": "false",
-  "isFirstRun": true,
-  "lastReleaseNotesVersion": "2.20.1",
-  "2022-Q1": {
-    "surveyActionTaken": false,
-    "surveyShownCount": 0
-  }
+  "analyticsEnabled": true,
+  "isFirstRun": false,
+  "lastReleaseNotesVersion": "2.28.4"
 }

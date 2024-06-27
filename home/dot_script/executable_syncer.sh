@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 echo "Upgrading Homebrew packages and update the .Brewfile..."
 brew update && brew upgrade && brew cleanup && brew bundle dump --global --describe --force
@@ -6,8 +6,8 @@ brew update && brew upgrade && brew cleanup && brew bundle dump --global --descr
 echo "Updating App Store applications..."
 mas upgrade
 
-echo "Updating Volta packages..."
-volta install node@latest pnpm@latest
+echo "Updating Proto tools..."
+proto install node && proto install npm && proto install pnpm && proto install yarn
 
 echo "Updating Visual Studio Code extensions..."
 code --update-extensions
