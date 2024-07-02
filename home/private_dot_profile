@@ -84,6 +84,7 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PYTHON="/opt/homebrew/bin/python3"
 
 # Integrate 1Password shell plugins
 [ -f "$HOME/.config/op/plugins.sh" ] && . "$HOME/.config/op/plugins.sh"
@@ -99,5 +100,6 @@ alias vim="nvim"
 alias nano="micro"
 alias npx="bun x"
 alias pnpx="bun x"
+alias python="python3"
 alias syncer='$HOME/.script/syncer.sh'
 alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
