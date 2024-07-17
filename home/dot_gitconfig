@@ -125,8 +125,6 @@
   allowedSignersFile = ~/.config/git/allowed_signers
 [pull]
 	ff = only
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [safe]
 	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/MichaelAquilina/zsh-you-should-use
 	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/marlonrichert/zsh-autocomplete
@@ -156,3 +154,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://dev.azure.com"]
+	useHttpPath = true
