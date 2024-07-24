@@ -28,9 +28,6 @@ export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 """
 
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
-
 [plugins.zsh-autocomplete]
 github = "marlonrichert/zsh-autocomplete"
 hooks.pre = """
@@ -38,11 +35,28 @@ zstyle '*:compinit' arguments -D -i -u -C -w
 zstyle ':autocomplete:*' delay 0.1
 """
 
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+[plugins.zsh-edit]
+github = "marlonrichert/zsh-edit"
+
 [plugins.prezto]
 github = "sorin-ionescu/prezto"
 use = [
   "modules/spectrum/init.zsh",
 ]
+
+# [plugins.zephyr]
+# github = "mattmc3/zephyr"
+# hooks.pre = """
+# zstyle ':zephyr:*:*' color yes
+# zstyle ':zephyr:plugin:terminal' auto-title yes
+# zstyle ':zephyr:plugin:history:alias' skip yes
+# zstyle ':zephyr:plugin:directory:alias' skip yes
+# zstyle ':zephyr:plugin:editor' key-bindings emacs
+# zstyle ':zephyr:plugin:editor' ps-context yes
+# """
 
 [plugins.ohmyzsh]
 github = "ohmyzsh/ohmyzsh"
@@ -71,22 +85,8 @@ unsetopt correct_all
 setopt correct
 """
 
-[plugins.zephyr]
-github = "mattmc3/zephyr"
-hooks.pre = """
-zstyle ':zephyr:*:*' color yes
-zstyle ':zephyr:plugin:terminal' auto-title yes
-zstyle ':zephyr:plugin:history:alias' skip yes
-zstyle ':zephyr:plugin:directory:alias' skip yes
-zstyle ':zephyr:plugin:editor' key-bindings emacs
-zstyle ':zephyr:plugin:editor' ps-context yes
-"""
-
 [plugins.fzf-zsh-plugin]
 github = "unixorn/fzf-zsh-plugin"
-
-[plugins.zsh-edit]
-github = "marlonrichert/zsh-edit"
 
 [plugins.zsh-you-should-use]
 github = "MichaelAquilina/zsh-you-should-use"
