@@ -21,22 +21,22 @@ inline = """
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+[plugins.zsh-autocomplete]
+github = "marlonrichert/zsh-autocomplete"
+hooks.pre = """
+zstyle '*:compinit' arguments -i -u -w
+zstyle ':autocomplete:*' delay 0.1
+"""
+
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 hooks.pre = """
 export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 """
-
-[plugins.zsh-autocomplete]
-github = "marlonrichert/zsh-autocomplete"
-hooks.pre = """
-zstyle '*:compinit' arguments -D -i -u -C -w
-zstyle ':autocomplete:*' delay 0.1
-"""
-
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
 
 [plugins.zsh-edit]
 github = "marlonrichert/zsh-edit"
@@ -47,16 +47,16 @@ use = [
   "modules/spectrum/init.zsh",
 ]
 
-# [plugins.zephyr]
-# github = "mattmc3/zephyr"
-# hooks.pre = """
-# zstyle ':zephyr:*:*' color yes
-# zstyle ':zephyr:plugin:terminal' auto-title yes
-# zstyle ':zephyr:plugin:history:alias' skip yes
-# zstyle ':zephyr:plugin:directory:alias' skip yes
-# zstyle ':zephyr:plugin:editor' key-bindings emacs
-# zstyle ':zephyr:plugin:editor' ps-context yes
-# """
+[plugins.zephyr]
+github = "mattmc3/zephyr"
+hooks.pre = """
+zstyle ':zephyr:*:*' color yes
+zstyle ':zephyr:plugin:terminal' auto-title yes
+zstyle ':zephyr:plugin:history:alias' skip yes
+zstyle ':zephyr:plugin:directory:alias' skip yes
+zstyle ':zephyr:plugin:editor' key-bindings emacs
+zstyle ':zephyr:plugin:editor' ps-context yes
+"""
 
 [plugins.ohmyzsh]
 github = "ohmyzsh/ohmyzsh"
@@ -100,4 +100,5 @@ bindkey '^[[A' _atuin_search_widget
 bindkey '^[OA' _atuin_search_widget
 bindkey '\t' autosuggest-accept
 source <(carapace _carapace zsh)
+eval "$(jenv init -)"
 """
