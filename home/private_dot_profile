@@ -79,6 +79,8 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 
 export PATH="$HOME/.jenv/bin:$PATH"
 
+export FVM_CACHE_PATH="$HOME/.fvm"
+
 #
 # Miscellaneous
 #

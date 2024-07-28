@@ -7,7 +7,7 @@ echo "Updating App Store applications..."
 mas upgrade
 
 echo "Updating Proto tools..."
-proto install node && proto install npm && proto install pnpm && proto install yarn
+proto upgrade && proto install node && proto install npm && proto install pnpm && proto install yarn
 
 echo "Updating Visual Studio Code extensions..."
 code --update-extensions
