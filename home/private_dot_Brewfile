@@ -6,6 +6,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/command-not-found"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "leoafarias/fvm"
 tap "modularml/packages"
 tap "mrkai77/cask"
 tap "oven-sh/bun"
@@ -67,8 +68,6 @@ brew "m4"
 brew "autoconf"
 # C library implementing the SSH2 protocol
 brew "libssh2"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
 # Regular expressions library
 brew "oniguruma"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -135,8 +134,6 @@ brew "libnghttp2"
 brew "ncurses"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
-# Open source suite of directory software
-brew "openldap"
 # Tool for downloading RTMP streaming media
 brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -161,6 +158,8 @@ brew "libpq"
 brew "libsodium"
 # C library for reading, creating, and modifying zip archives
 brew "libzip"
+# Open source suite of directory software
+brew "openldap"
 # Granddaddy of HTML tools, with support for modern standards
 brew "tidy-html5"
 # General-purpose scripting language
@@ -185,6 +184,8 @@ brew "docker-credential-helper"
 brew "duti"
 # Command-line tool to interact with exercism.io
 brew "exercism"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Modern, maintained replacement for ls
 brew "eza"
 # Command-line tools for fly.io services
@@ -213,10 +214,16 @@ brew "go"
 brew "gping"
 # Smart font renderer for non-Roman scripts
 brew "graphite2"
+# Popular GNU data compression program
+brew "gzip"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Checks presence of various command-line tools and their versions on the path
 brew "has"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# Manage your Java environment
+brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Library for interacting with JSON
@@ -269,8 +276,8 @@ brew "pam-reattach"
 brew "pcre"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Pluggable multi-language version manager
+brew "proto"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
 # Monitor data's progress through a pipe
@@ -281,6 +288,8 @@ brew "python@3.11"
 brew "pyyaml"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
+# Persistent key-value database, with built-in net interface
+brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -305,8 +314,10 @@ brew "terminal-notifier"
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
-# JavaScript toolchain manager for reproducible environments
-brew "volta"
+# Extraction utility for .zip compressed archives
+brew "unzip"
+# Image processing library
+brew "vips"
 # Execute commands when watched files change
 brew "watchexec"
 # Internet file retriever
@@ -317,6 +328,8 @@ brew "yq"
 brew "zip"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Simple cli to manage Flutter SDK versions per project
+brew "leoafarias/fvm/fvm"
 # Modular developer CLI tool
 brew "modularml/packages/modular"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
@@ -343,8 +356,6 @@ cask "betterdisplay"
 cask "coconutbattery"
 # Collaborative team software
 cask "figma"
-# UI toolkit for building applications for mobile, web and desktop
-cask "flutter"
 cask "font-commit-mono"
 cask "font-fira-code"
 cask "font-geist"
@@ -363,14 +374,14 @@ cask "hiddenbar"
 cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Open-source screen recorder built with web technology
+cask "kap"
 # File archiver
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
-# Screen and video recording software
-cask "loom"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Calculator and converter application
@@ -379,6 +390,8 @@ cask "numi"
 cask "obs"
 # Customise and maintain app icons
 cask "pictogram"
+# Collaboration platform for API development
+cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Screenshot measurement and annotation tool
@@ -389,10 +402,12 @@ cask "steam"
 cask "swiftdefaultappsprefpane"
 # Native GUI tool for relational databases
 cask "tableplus"
-# Mesh VPN based on Wireguard
+# Mesh VPN based on WireGuard
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin@11"
 # Utility to change the default backup interval of Time Machine
 cask "timemachineeditor"
 # Open-source code editor
@@ -414,7 +429,7 @@ mas "Craft", id: 1487937127
 mas "Developer", id: 640199958
 mas "Equinox", id: 1591510203
 mas "F5Access", id: 1243219105
-mas "Ghostery – Privacy Ad Blocker", id: 1436953057
+mas "Ghostery Privacy Ad Blocker", id: 6504861501
 mas "Keynote", id: 409183694
 mas "MenubarX", id: 1575588022
 mas "Numbers", id: 409203825
@@ -429,6 +444,7 @@ mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
 vscode "ahmadalli.vscode-nginx-conf"
 vscode "alyxz.icons-carbon-tweaked"
+vscode "antfu.file-nesting"
 vscode "arcanis.vscode-zipfs"
 vscode "astro-build.astro-vscode"
 vscode "bennycode.sort-everything"
@@ -439,6 +455,7 @@ vscode "brunnerh.file-properties-viewer"
 vscode "christian-kohler.npm-intellisense"
 vscode "codezombiech.gitignore"
 vscode "dart-code.dart-code"
+vscode "dart-code.flutter"
 vscode "dbaeumer.vscode-eslint"
 vscode "dbankier.vscode-quick-select"
 vscode "denoland.vscode-deno"

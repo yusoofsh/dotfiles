@@ -6,9 +6,3 @@
 #
 
 eval "$(sheldon source)"
-
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /Users/yusoofsh/.config/.dart-cli-completion/zsh-config.zsh ]] && . /Users/yusoofsh/.config/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-
