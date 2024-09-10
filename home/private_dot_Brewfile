@@ -114,8 +114,6 @@ brew "pixman"
 brew "cairo"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
-# Cloudflare Tunnel client (formerly Argo Tunnel)
-brew "cloudflared"
 # YAML Parser
 brew "libyaml"
 # Powerful, clean, object-oriented scripting language
@@ -182,14 +180,10 @@ brew "docker-compose"
 brew "docker-credential-helper"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
-# Command-line tool to interact with exercism.io
-brew "exercism"
 # C library of Git core methods that is re-entrant and linkable
 brew "libgit2"
 # Modern, maintained replacement for ls
 brew "eza"
-# Command-line tools for fly.io services
-brew "flyctl"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
 # Command-line fuzzy finder written in Go
@@ -276,8 +270,6 @@ brew "pam-reattach"
 brew "pcre"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Pluggable multi-language version manager
-brew "proto"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
 # Monitor data's progress through a pipe
@@ -289,7 +281,7 @@ brew "pyyaml"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
 # Persistent key-value database, with built-in net interface
-brew "redis"
+brew "redis", restart_service: true
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -318,6 +310,8 @@ brew "tpm"
 brew "unzip"
 # Image processing library
 brew "vips"
+# JavaScript toolchain manager for reproducible environments
+brew "volta"
 # Execute commands when watched files change
 brew "watchexec"
 # Internet file retriever
@@ -348,8 +342,6 @@ cask "android-commandlinetools"
 cask "android-studio"
 # Chromium based browser
 cask "arc"
-# Multi-track audio editor and recorder
-cask "audacity"
 # Display management tool
 cask "betterdisplay"
 # Tool to show live information about the batteries in various devices
@@ -380,8 +372,6 @@ cask "kap"
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
-# Interactive tool for analyzing MongoDB data
-cask "mongodb-compass"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Calculator and converter application
@@ -400,8 +390,6 @@ cask "shottr"
 cask "steam"
 # Replacement for RCDefaultApps, written in Swift
 cask "swiftdefaultappsprefpane"
-# Native GUI tool for relational databases
-cask "tableplus"
 # Mesh VPN based on WireGuard
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -412,10 +400,6 @@ cask "temurin@11"
 cask "timemachineeditor"
 # Open-source code editor
 cask "visual-studio-code"
-# Remote desktop application focusing on security
-cask "vnc-viewer"
-# Native desktop client for WhatsApp
-cask "whatsapp@beta"
 # Wine wrapper built with SwiftUI
 cask "whisky"
 # Open-source version of the X.Org X Window System
@@ -442,6 +426,7 @@ mas "Termius", id: 1176074088
 mas "TestFlight", id: 899247664
 mas "Velja", id: 1607635845
 mas "WireGuard", id: 1451685025
+mas "‎WhatsApp", id: 310633997
 vscode "ahmadalli.vscode-nginx-conf"
 vscode "alyxz.icons-carbon-tweaked"
 vscode "antfu.file-nesting"
