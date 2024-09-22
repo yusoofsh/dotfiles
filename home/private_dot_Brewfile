@@ -190,6 +190,10 @@ brew "fortune"
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
+# Smart font renderer for non-Roman scripts
+brew "graphite2"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Distributed revision control system
 brew "git"
 # Quickly rewrite git repository history
@@ -206,12 +210,8 @@ brew "gnu-getopt"
 brew "go"
 # Ping, but with a graph
 brew "gping"
-# Smart font renderer for non-Roman scripts
-brew "graphite2"
 # Popular GNU data compression program
 brew "gzip"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Checks presence of various command-line tools and their versions on the path
 brew "has"
 # Manage compile and link flags for libraries
@@ -372,6 +372,8 @@ cask "kap"
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Calculator and converter application
