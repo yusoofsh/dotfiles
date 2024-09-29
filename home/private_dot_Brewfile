@@ -238,8 +238,6 @@ brew "libtermkey"
 brew "libuv"
 # C99 library which implements a VT220 or xterm terminal emulator
 brew "libvterm"
-# High-performance theorem prover
-brew "z3"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -292,6 +290,8 @@ brew "shadowsocks-rust"
 brew "sheldon"
 # SMART hard drive monitoring
 brew "smartmontools"
+# Launcher to analyze a project with SonarQube
+brew "sonar-scanner"
 # Cross-shell prompt for astronauts
 brew "starship"
 # High-performance system programming language
@@ -318,6 +318,8 @@ brew "watchexec"
 brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# High-performance theorem prover
+brew "z3"
 # Compression and file packaging/archive utility
 brew "zip"
 # Shell extension to navigate your filesystem faster
