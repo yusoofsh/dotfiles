@@ -146,8 +146,6 @@ brew "freetds"
 brew "libavif"
 # Graphics library to dynamically manipulate images
 brew "gd"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c"
 # Network authentication protocol
 brew "krb5"
 # Postgres C API library
@@ -194,6 +192,8 @@ brew "gh"
 brew "graphite2"
 # OpenType text shaping engine
 brew "harfbuzz"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c"
 # Distributed revision control system
 brew "git"
 # Quickly rewrite git repository history
@@ -279,7 +279,7 @@ brew "pyyaml"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
 # Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
+brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -486,7 +486,6 @@ vscode "ms-vscode.live-server"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
 vscode "nisanthchunduru.copy-filepath-with-line-number"
-vscode "nrwl.angular-console"
 vscode "patbenatar.advanced-new-file"
 vscode "pflannery.vscode-versionlens"
 vscode "prisma.prisma"

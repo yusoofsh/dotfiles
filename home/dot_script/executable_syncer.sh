@@ -19,5 +19,8 @@ sheldon lock --update
 echo "Updating TLDR caches..."
 tldr --update
 
+echo "Upgrading Flutter..."
+flutter upgrade
+
 echo "Re-adding Chezmoi dotfiles..."
 chezmoi init && chezmoi re-add --force
