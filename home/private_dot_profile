@@ -86,7 +86,7 @@ export PATH="$FVM_CACHE_PATH/default/bin:$PATH"
 # Miscellaneous
 #
 
-# export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+export CHROME_EXECUTABLE="/Applications/Chromium.app/Contents/MacOS/Chromium"
 export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export PYTHON="/opt/homebrew/bin/python3"

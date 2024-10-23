@@ -1,5 +1,6 @@
 {
   "enable-windows-desktop": true,
   "enable-macos-desktop": true,
-  "enable-linux-desktop": true
+  "enable-linux-desktop": true,
+  "jdk-dir": "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/"
 }
