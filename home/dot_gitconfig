@@ -156,3 +156,5 @@
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[http]
+	postBuffer = 157286400
