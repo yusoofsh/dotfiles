@@ -82,14 +82,14 @@ brew "freetype"
 brew "fontconfig"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
+# C string library for manipulating Unicode strings
+brew "libunistring"
 # Perl compatible regular expressions library with a new API
 brew "pcre2"
 # Library for command-line editing
 brew "readline"
 # Command-line interface for SQLite
 brew "sqlite"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Core application library for C
 brew "glib"
 # X.Org: Protocol Headers
@@ -110,6 +110,8 @@ brew "libxrender"
 brew "lzo"
 # Low-level library for pixel manipulation
 brew "pixman"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -122,8 +124,6 @@ brew "ruby"
 brew "cocoapods"
 # GNU multiple precision arithmetic library
 brew "gmp"
-# C string library for manipulating Unicode strings
-brew "libunistring"
 # International domain name library (IDNA2008, Punycode and TR46)
 brew "libidn2"
 # HTTP/2 C Library
@@ -238,6 +238,8 @@ brew "libtermkey"
 brew "libuv"
 # C99 library which implements a VT220 or xterm terminal emulator
 brew "libvterm"
+# High-performance theorem prover
+brew "z3"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -316,10 +318,10 @@ brew "volta"
 brew "watchexec"
 # Internet file retriever
 brew "wget"
+# Best command-line tool to install and switch between multiple versions of Xcode
+brew "xcodes"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
-# High-performance theorem prover
-brew "z3"
 # Compression and file packaging/archive utility
 brew "zip"
 # Shell extension to navigate your filesystem faster
@@ -346,6 +348,8 @@ cask "android-studio"
 cask "arc"
 # Display management tool
 cask "betterdisplay"
+# Free and open-source web browser
+cask "chromium"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
 # Collaborative team software
@@ -400,10 +404,10 @@ cask "tailscale"
 cask "temurin"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@11"
-# Utility to change the default backup interval of Time Machine
-cask "timemachineeditor"
 # Open-source code editor
 cask "visual-studio-code"
+# Remote desktop application focusing on security
+cask "vnc-viewer"
 # Wine wrapper built with SwiftUI
 cask "whisky"
 # Open-source version of the X.Org X Window System
@@ -428,7 +432,9 @@ mas "Playgrounds", id: 1496833156
 mas "Shareful", id: 1522267256
 mas "Termius", id: 1176074088
 mas "TestFlight", id: 899247664
+mas "Transporter", id: 1450874784
 mas "Velja", id: 1607635845
+mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
 mas "‎WhatsApp", id: 310633997
 vscode "ahmadalli.vscode-nginx-conf"
@@ -485,10 +491,10 @@ vscode "ms-vscode.cpptools"
 vscode "ms-vscode.live-server"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
+vscode "nicolasvuillamy.vscode-groovy-lint"
 vscode "nisanthchunduru.copy-filepath-with-line-number"
 vscode "patbenatar.advanced-new-file"
 vscode "pflannery.vscode-versionlens"
-vscode "prisma.prisma"
 vscode "quick-lint.quick-lint-js"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
@@ -496,6 +502,7 @@ vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "sleistner.vscode-fileutils"
 vscode "sonarsource.sonarlint-vscode"
+vscode "sswg.swift-lang"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "supermaven.supermaven"
 vscode "tailscale.vscode-tailscale"
@@ -505,6 +512,7 @@ vscode "timonwong.shellcheck"
 vscode "tommasov.hosts"
 vscode "tonybaloney.vscode-pets"
 vscode "usernamehw.errorlens"
+vscode "vadimcn.vscode-lldb"
 vscode "visualstudioexptteam.vscodeintellicode"
 vscode "visualstudioexptteam.vscodeintellicode-completions"
 vscode "vknabel.vscode-apple-swift-format"
