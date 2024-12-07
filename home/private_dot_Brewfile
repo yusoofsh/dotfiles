@@ -122,16 +122,10 @@ brew "libyaml"
 brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# GNU multiple precision arithmetic library
-brew "gmp"
-# International domain name library (IDNA2008, Punycode and TR46)
-brew "libidn2"
-# HTTP/2 C Library
-brew "libnghttp2"
-# Text-based UI library
-brew "ncurses"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# HTTP/2 C Library
+brew "libnghttp2"
 # Tool for downloading RTMP streaming media
 brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -146,6 +140,8 @@ brew "freetds"
 brew "libavif"
 # Graphics library to dynamically manipulate images
 brew "gd"
+# GNU multiple precision arithmetic library
+brew "gmp"
 # Network authentication protocol
 brew "krb5"
 # Postgres C API library
@@ -204,6 +200,8 @@ brew "gitleaks"
 brew "glab"
 # Command-line option parsing utility
 brew "gnu-getopt"
+# International domain name library (IDNA2008, Punycode and TR46)
+brew "libidn2"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Ping, but with a graph
@@ -212,14 +210,16 @@ brew "gping"
 brew "gzip"
 # Checks presence of various command-line tools and their versions on the path
 brew "has"
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Manage your Java environment
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Library for interacting with JSON
 brew "jsoncpp"
+# Text-based UI library
+brew "ncurses"
 # Pager program similar to more
 brew "less"
 # CBOR protocol implementation for C and others
@@ -378,8 +378,6 @@ cask "kap"
 cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
-# Interactive tool for analyzing MongoDB data
-cask "mongodb-compass"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Calculator and converter application
@@ -410,6 +408,8 @@ cask "visual-studio-code"
 cask "vnc-viewer"
 # Wine wrapper built with SwiftUI
 cask "whisky"
+# Administration tool for MikroTik RouterOS
+cask "winbox"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
 # Video communication and virtual meeting platform
