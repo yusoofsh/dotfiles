@@ -42,8 +42,9 @@
   autoDetectTimeout = 500
   guiPrompt = false
   cacheOptions = --timeout 1200
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
+
 [diff]
   mnemonicPrefix = true
   renames = true
@@ -97,8 +98,8 @@
   writeToTemp = true
   prompt = false
 
-# [pull]
-#   ff = only
+[pull]
+  ff = only
 
 [push]
   default = matching
@@ -121,40 +122,7 @@
   format = ssh
 
 [gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
   allowedSignersFile = ~/.config/git/allowed_signers
-[pull]
-	ff = only
-[safe]
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/MichaelAquilina/zsh-you-should-use
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/marlonrichert/zsh-autocomplete
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/marlonrichert/zsh-edit
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/mattmc3/zephyr
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/mattmc3/zephyr/plugins/completion/external
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/ohmyzsh/ohmyzsh
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/autosuggestions/external
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/completion/external
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/fasd/external
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/history-substring-search/external
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/prompt/external/agnoster
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/prompt/external/async
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/prompt/external/powerlevel10k
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/prompt/external/powerline
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/prompt/external/pure
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/sorin-ionescu/prezto/modules/syntax-highlighting/external
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/unixorn/fzf-zsh-plugin
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/zdharma-continuum/fast-syntax-highlighting
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/zsh-users/zsh-autosuggestions
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/zsh-users/zsh-completions
-	directory = /Users/yusoofsh/.local/share/sheldon/repos/github.com/zsh-users/~zsh-completions
-[credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+
 [http]
 	postBuffer = 157286400

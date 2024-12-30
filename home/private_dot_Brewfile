@@ -80,10 +80,10 @@ brew "caddy"
 brew "freetype"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
-# GNU internationalization (i18n) and localization (l10n) library
-brew "gettext"
 # C string library for manipulating Unicode strings
 brew "libunistring"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
 # Perl compatible regular expressions library with a new API
 brew "pcre2"
 # Library for command-line editing
@@ -247,7 +247,7 @@ brew "luv"
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Move files and folders to the trash
-brew "macos-trash"
+brew "macos-trash", link: true
 # Utility for directing compilation
 brew "make"
 # Mac App Store command-line interface
@@ -463,6 +463,8 @@ vscode "esbenp.prettier-vscode"
 vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
 vscode "fwcd.kotlin"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.remotehub"
 vscode "github.vscode-pull-request-github"
 vscode "gitlab.gitlab-workflow"
@@ -502,6 +504,7 @@ vscode "redhat.java"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
+vscode "saoudrizwan.claude-dev"
 vscode "sleistner.vscode-fileutils"
 vscode "sonarsource.sonarlint-vscode"
 vscode "sswg.swift-lang"
