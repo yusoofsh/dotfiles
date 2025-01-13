@@ -1,5 +1,5 @@
 [user]
-  name = Yusoof Moh
+	name = Yusoof Moh
 
 [color "branch"]
   current = yellow bold reverse
@@ -27,7 +27,7 @@
 [core]
   pager = bat
   whitespace = trailing-space
-  autocrlf = input
+	autocrlf = input
   longpaths = true
   excludesFile = ~/.gitignore
   editor = code --wait
@@ -36,7 +36,7 @@
 	fsmonitor = true
 
 [commit]
-  gpgSign = true
+	gpgsign = true
 
 [credential]
   autoDetectTimeout = 500
@@ -79,7 +79,7 @@
   autoCorrect = prompt
 
 [init]
-  defaultBranch = main
+	defaultBranch = main
 
 [log]
   abbrevCommit = true
@@ -119,10 +119,11 @@
   gpgSign = true
 
 [gpg]
-  format = ssh
+	format = ssh
 
 [gpg "ssh"]
   allowedSignersFile = ~/.config/git/allowed_signers
+	defaultKeyCommand = ssh-add -L
 
 [http]
 	postBuffer = 157286400
