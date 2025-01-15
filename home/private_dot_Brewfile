@@ -170,6 +170,8 @@ brew "deno"
 brew "docker-completion"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
 # Isolated development environments using Docker
 brew "docker-compose"
 # Platform keystore credential helper for Docker
@@ -504,8 +506,8 @@ vscode "quick-lint.quick-lint-js"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
+vscode "rooveterinaryinc.roo-cline"
 vscode "rust-lang.rust-analyzer"
-vscode "saoudrizwan.claude-dev"
 vscode "sleistner.vscode-fileutils"
 vscode "sonarsource.sonarlint-vscode"
 vscode "sswg.swift-lang"
