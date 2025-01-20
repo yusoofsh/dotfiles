@@ -74,9 +74,6 @@ export PATH="$CARGOPATH/bin:$PATH"
 export PUB_CACHE="$HOME/.pub-cache"
 export PATH="$PUB_CACHE/bin:$PATH"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
 export PATH="$HOME/.jenv/bin:$PATH"
 
 export FVM_CACHE_PATH="$HOME/.fvm"
@@ -89,7 +86,6 @@ export PATH="$FVM_CACHE_PATH/default/bin:$PATH"
 export CHROME_EXECUTABLE="/Applications/Chromium.app/Contents/MacOS/Chromium"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export PYTHON="/opt/homebrew/bin/python3"
-export VOLTA_FEATURE_PNPM=1
 
 #
 # Aliases
