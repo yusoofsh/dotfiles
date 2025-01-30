@@ -29,36 +29,19 @@ github = "marlonrichert/zsh-autocomplete"
 hooks.pre = """
 zstyle '*:compinit' arguments -i -u -w
 zstyle ':autocomplete:*' delay 0.1
+zstyle ':autocomplete:*' widget-style menu-select
 """
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 hooks.pre = """
-export ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=false
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 """
 
 [plugins.zsh-edit]
 github = "marlonrichert/zsh-edit"
-
-# [plugins.prezto]
-# github = "sorin-ionescu/prezto"
-# use = [
-#   "modules/spectrum/init.zsh",
-#   "modules/completion/init.zsh",
-#   "modules/completion/init.zsh",
-# ]
-
-# [plugins.zephyr]
-# github = "mattmc3/zephyr"
-# hooks.pre = """
-# zstyle ':zephyr:*:*' color yes
-# zstyle ':zephyr:plugin:terminal' auto-title yes
-# zstyle ':zephyr:plugin:history:alias' skip yes
-# zstyle ':zephyr:plugin:directory:alias' skip yes
-# zstyle ':zephyr:plugin:editor' key-bindings emacs
-# zstyle ':zephyr:plugin:editor' ps-context yes
-# """
 
 [plugins.ohmyzsh]
 github = "ohmyzsh/ohmyzsh"
@@ -90,9 +73,8 @@ setopt correct
 [plugins.fzf-zsh-plugin]
 github = "unixorn/fzf-zsh-plugin"
 
-[plugins.zsh-you-should-use]
-github = "MichaelAquilina/zsh-you-should-use"
-hooks.pre = "export YSU_MODE=ALL"
+[plugins.zsh-node-bin]
+github = "remcohaszing/zsh-node-bin"
 
 [plugins.post]
 inline = """
@@ -100,7 +82,15 @@ export ATUIN_NOBIND="true"
 source <(atuin init zsh)
 bindkey '^[[A' _atuin_search_widget
 bindkey '^[OA' _atuin_search_widget
+
+bindkey '\t' menu-select
+bindkey -M menuselect '\t' menu-complete
+bindkey -M menuselect '\r' .accept-line
 bindkey '\t' autosuggest-accept
+
 source <(carapace _carapace zsh)
+
 eval "$(jenv init -)"
+
+eval "$(pay-respects zsh --alias)"
 """
