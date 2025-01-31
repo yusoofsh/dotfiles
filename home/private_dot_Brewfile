@@ -309,6 +309,8 @@ brew "tidy-html5"
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
+# Auto-hinter for TrueType fonts
+brew "ttfautohint"
 # Extraction utility for .zip compressed archives
 brew "unzip"
 # Image processing library
@@ -351,8 +353,6 @@ cask "betterdisplay"
 cask "chromium"
 # Tool to show live information about the batteries in various devices
 cask "coconutbattery"
-# Write, edit, and chat about your code with AI
-cask "cursor"
 # Collaborative team software
 cask "figma"
 cask "font-commit-mono"
@@ -361,6 +361,8 @@ cask "font-geist"
 cask "font-inter"
 cask "font-space-grotesk"
 cask "font-victor-mono"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
 # Graphically shows disk usage within a file system
