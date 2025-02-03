@@ -95,8 +95,8 @@ export NI_GLOBAL_AGENT="bun"
 # Aliases
 #
 
-alias z="zi"
-alias c="clear"
+# alias z="zi"
+# alias c="clear"
 alias cat="bat"
 alias vim="nvim"
 alias nano="micro"
