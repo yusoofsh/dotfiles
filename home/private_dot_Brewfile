@@ -155,10 +155,16 @@ brew "docker-credential-helper"
 brew "duti"
 # Modern, maintained replacement for ls
 brew "eza"
-# Infamous electronic fortune-cookie generator
-brew "fortune"
+# Smart font renderer for non-Roman scripts
+brew "graphite2"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Generic library support script
 brew "libtool"
+# Command-line outline and bitmap font editor/converter
+brew "fontforge"
+# Infamous electronic fortune-cookie generator
+brew "fortune"
 # ODBC 3 connectivity for UNIX
 brew "unixodbc"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
@@ -171,10 +177,6 @@ brew "libavif"
 brew "gd"
 # GitHub command-line tool
 brew "gh"
-# Smart font renderer for non-Roman scripts
-brew "graphite2"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Distributed revision control system
 brew "git"
 # Quickly rewrite git repository history
@@ -369,6 +371,8 @@ cask "grandperspective"
 cask "handbrake"
 # Utility to hide menu bar items
 cask "hiddenbar"
+# Testing client for REST, GraphQL, and HTTP APIs
+cask "httpie"
 # Free and open-source media player
 cask "iina"
 # HTTP and GraphQL Client
@@ -472,6 +476,8 @@ vscode "formulahendry.code-runner"
 vscode "foxundermoon.shell-format"
 vscode "fwcd.kotlin"
 vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
@@ -488,7 +494,6 @@ vscode "lkrms.inifmt"
 vscode "maptz.camelcasenavigation"
 vscode "matthewpi.caddyfile-support"
 vscode "mhutchie.git-graph"
-vscode "miguelsolorio.symbols"
 vscode "mousavian.ssh-config-syntax-highlighter"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"

@@ -103,5 +103,6 @@ alias nano="micro"
 alias npx="bun x"
 alias pnpx="bun x"
 alias python="python3"
+alias pip="pip3"
 alias syncer='$HOME/.script/syncer.sh'
 alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
