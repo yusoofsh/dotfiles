@@ -8,11 +8,13 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "leoafarias/fvm"
 tap "modularml/packages"
+tap "mongodb/brew"
 tap "mrkai77/cask"
 tap "oven-sh/bun"
 tap "rsteube/tap"
 tap "str4d.xyz/rage", "https://str4d.xyz/rage"
 tap "timescam/tap"
+tap "trycua/lume"
 # C++ Common Libraries
 brew "abseil"
 # Simple, modern, secure file encryption
@@ -78,7 +80,7 @@ brew "bat"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
-brew "caddy"
+brew "caddy", restart_service: :changed
 # Software library to render fonts
 brew "freetype"
 # XML-based font configuration API for X Windows
@@ -126,7 +128,7 @@ brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
+brew "colima", restart_service: :changed
 # GNU multiple precision arithmetic library
 brew "gmp"
 # GNU File, Shell, and Text utilities
@@ -201,6 +203,8 @@ brew "gzip"
 brew "has"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# CLI client for interacting with Incus
+brew "incus"
 # Manage your Java environment
 brew "jenv"
 # Lightweight and flexible command-line JSON processor
@@ -281,8 +285,6 @@ brew "python@3.11"
 brew "pyyaml"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
-# Persistent key-value database, with built-in net interface
-brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -333,12 +335,16 @@ brew "zoxide"
 brew "leoafarias/fvm/fvm"
 # Modular developer CLI tool
 brew "modularml/packages/modular"
+# This package contains standard utilities for interacting with MongoDB.
+brew "mongodb/brew/mongodb-database-tools"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # multi-shell multi-command argument completer
 brew "rsteube/tap/carapace"
 # CLI tool to pay respects
 brew "timescam/tap/pay-respects"
+# CLI and local API server to run macOS and Linux VMs on Apple Silicon
+brew "trycua/lume/lume"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Enable Windows-like alt-tab
@@ -485,6 +491,7 @@ vscode "gitlab.gitlab-workflow"
 vscode "golang.go"
 vscode "goopware.raythis"
 vscode "graphql.vscode-graphql-syntax"
+vscode "gxl.git-graph-3"
 vscode "ibm.output-colorizer"
 vscode "idleberg.applescript"
 vscode "jasonlhy.hungry-delete"
@@ -493,7 +500,6 @@ vscode "letrieu.expand-region"
 vscode "lkrms.inifmt"
 vscode "maptz.camelcasenavigation"
 vscode "matthewpi.caddyfile-support"
-vscode "mhutchie.git-graph"
 vscode "mousavian.ssh-config-syntax-highlighter"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
@@ -518,6 +524,7 @@ vscode "socheatsok78-lab.dotenv-vscode-stripped"
 vscode "sswg.swift-lang"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "supermaven.supermaven"
+vscode "swiftlang.swift-vscode"
 vscode "tamasfe.even-better-toml"
 vscode "thang-nm.catppuccin-perfect-icons"
 vscode "timonwong.shellcheck"

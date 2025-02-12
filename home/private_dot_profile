@@ -32,8 +32,13 @@ fi
 # Editors
 #
 
-export EDITOR="${EDITOR:-micro}"
-export VISUAL="code --wait"
+if [ -n "$DISPLAY" ] || [ -n "$WAYLAND_DISPLAY" ] || [ -n "$MIR_SOCKET" ]; then
+  export VISUAL="code --wait"
+else
+  export VISUAL="micro"
+fi
+export EDITOR="$VISUAL"
+
 export PAGER="less --mouse"
 export LESS="-g -i -M -R -S -w -z-4"
 
@@ -105,4 +110,5 @@ alias pnpx="bun x"
 alias python="python3"
 alias pip="pip3"
 alias syncer='$HOME/.script/syncer.sh'
+alias skagent='$HOME/.script/skagent.sh'
 alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"
