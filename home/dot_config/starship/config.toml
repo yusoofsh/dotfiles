@@ -10,166 +10,251 @@ add_newline = true
 # [line_break]
 # disabled = true
 
+[bun]
+# detect_extensions = []
+symbol = " "
+
 [c]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [cmake]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [cobol]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [crystal]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [daml]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [dart]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [deno]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [dotnet]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [elixir]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [elm]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [erlang]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [fennel]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [golang]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [gradle]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [haxe]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [haskell]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [helm]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [java]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [julia]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [kotlin]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [kubernetes]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [lua]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [nim]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = "󰆥 "
 
 [nodejs]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [ocaml]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [opa]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [perl]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [php]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [python]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [purescript]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [red]
-detect_extensions = [
-]
-
-[ruby]
-detect_extensions = [
-]
-
-[rust]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [rlang]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = "󰟔 "
+
+[ruby]
+# detect_extensions = []
+symbol = " "
+
+[rust]
+# detect_extensions = []
+symbol = "󱘗 "
 
 [scala]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [solidity]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [swift]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
 
 [terraform]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [vlang]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [vagrant]
-detect_extensions = [
-]
+# detect_extensions = []
 
 [zig]
-detect_extensions = [
-]
+# detect_extensions = []
+symbol = " "
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[guix_shell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nix_shell]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = " "
