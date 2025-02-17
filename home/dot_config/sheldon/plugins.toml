@@ -51,7 +51,6 @@ use = [
   "plugins/dircycle/dircycle.plugin.zsh",
   "plugins/zoxide/zoxide.plugin.zsh",
   "plugins/brew/brew.plugin.zsh",
-  "plugins/iterm2/iterm2.plugin.zsh",
   "plugins/vscode/vscode.plugin.zsh",
   "plugins/xcode/xcode.plugin.zsh",
   "plugins/starship/starship.plugin.zsh",
@@ -63,7 +62,6 @@ export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_UNINSTALL_DEPENDENCIES=1
 export HOMEBREW_NO_ENV_HINTS=1
-zstyle ':omz:plugins:iterm2' shell-integration yes
 """
 hooks.post = """
 unsetopt correct_all

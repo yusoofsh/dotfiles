@@ -73,3 +73,5 @@ scroll_context_lines = 2
 #   "^secret-cmd",
 #   "^innocuous-cmd .*--secret=.+"
 # ]
+
+enter_accept = true

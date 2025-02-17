@@ -317,6 +317,8 @@ brew "tpm"
 brew "ttfautohint"
 # Extraction utility for .zip compressed archives
 brew "unzip"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Image processing library
 brew "vips"
 # Execute commands when watched files change
@@ -502,6 +504,7 @@ vscode "matthewpi.caddyfile-support"
 vscode "mousavian.ssh-config-syntax-highlighter"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode.cpptools"
