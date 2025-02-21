@@ -5,8 +5,8 @@ This repository contains your dotfiles managed by chezmoi.
 ## Installation
 
 Run the installer:
-```
-sh install.sh
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/yusoofsh/dotfiles/HEAD/install.sh)"
 ```
 
 ## Usage
