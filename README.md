@@ -1,11 +1,17 @@
 # Dotfiles
 
-Personal dotfiles managed by [chezmoi](https://chezmoi.io).
+This repository contains your dotfiles managed by chezmoi.
 
-## Install
+## Installation
 
-This script will install Homebrew and chezmoi and apply the dotfiles
+Run the installer:
+```
+sh install.sh
+```
 
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/yusoofsh/dotfiles/HEAD/install.sh)"
+## Usage
+
+Manage your dotfiles with:
+```
+chezmoi [command] [arguments]
 ```
