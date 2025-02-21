@@ -1,42 +1,31 @@
-#!/bin/bash
+#!/bin/sh
 
-set -eufo pipefail
+# -e: exit on error
+# -u: exit on unset variables
+set -eu
 
-echo ""
-echo "🤚 This script will setup .dotfiles for you."
-echo "💬 Ensure you have imported the GPG private key to decrypt the files."
-read -n 1 -r -s -p $'\n    Press any key to continue or Ctrl+C to abort...\n'
-
-if [[ $(uname -s) == "Darwin" ]]; then
-    # Check if Homebrew is installed, if not install it
-    if ! command -v brew &>/dev/null; then
-        echo ""
-        echo "🍺 Installing Homebrew and it's dependencies"
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-    fi
-
-    # Check if chezmoi is installed, if not install it
-    if ! command -v chezmoi &>/dev/null; then
-        echo ""
-        echo "� Installing chezmoi"
-        brew install chezmoi
-    fi
-
-    # Initialize dotfiles
-    echo ""
-    echo "🚀 Initializing dotfiles"
-    chezmoi init --verbose --apply --ssh yusoofsh
-
-elif [[ $(uname -s) == "Linux" ]]; then
-    # Initialize dotfiles
-    sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME"/.local/bin init --apply yusoofsh
-
-else
-    echo ""
-    echo "❌ Unsupported system"
-
+if ! chezmoi="$(command -v chezmoi)"; then
+	bin_dir="${HOME}/.local/bin"
+	chezmoi="${bin_dir}/chezmoi"
+	echo "Installing chezmoi to '${chezmoi}'" >&2
+	if command -v curl >/dev/null; then
+		chezmoi_install_script="$(curl -fsSL get.chezmoi.io)"
+	elif command -v wget >/dev/null; then
+		chezmoi_install_script="$(wget -qO- get.chezmoi.io)"
+	else
+		echo "To install chezmoi, you must have curl or wget installed." >&2
+		exit 1
+	fi
+	sh -c "${chezmoi_install_script}" -- -b "${bin_dir}"
+	unset chezmoi_install_script bin_dir
 fi
 
-echo ""
-echo "✅ Done."
+# POSIX way to get script's dir: https://stackoverflow.com/a/29834779/12156188
+script_dir="$(cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P)"
+
+set -- init --apply --source="${script_dir}"
+
+echo "Running 'chezmoi $*'" >&2
+
+# exec: replace current process with chezmoi
+exec "$chezmoi" "$@"
