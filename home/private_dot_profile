@@ -95,8 +95,6 @@ export PATH="$HOME/.bun/bin:$PATH"
 export CHROME_EXECUTABLE="/Applications/Chromium.app/Contents/MacOS/Chromium"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export PYTHON="/opt/homebrew/bin/python3"
-export NI_DEFAULT_AGENT="bun"
-export NI_GLOBAL_AGENT="bun"
 
 #
 # Aliases
