@@ -84,8 +84,6 @@ export PATH="$PUB_CACHE/bin:$PATH"
 export FVM_CACHE_PATH="$HOME/.fvm"
 export PATH="$FVM_CACHE_PATH/default/bin:$PATH"
 
-export PATH="$HOME/.jenv/bin:$PATH"
-
 export PATH="$HOME/.bun/bin:$PATH"
 
 #
@@ -109,6 +107,6 @@ alias npx="bun x"
 alias pnpx="bun x"
 alias python="python3"
 alias pip="pip3"
-alias syncer='$HOME/.script/syncer.sh'
-alias skagent='$HOME/.script/skagent.sh'
+alias syncer='$HOME/.scripts/syncer.sh'
+alias skagent='$HOME/.scripts/skagent.sh'
 alias lsa="eza --all --long --icons --tree --level 1 --no-permissions --no-user --time-style long-iso --git --sort=name --group-directories-first --binary"

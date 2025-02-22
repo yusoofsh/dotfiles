@@ -214,8 +214,8 @@ brew "has"
 brew "pkgconf"
 # CLI client for interacting with Incus
 brew "incus"
-# Manage your Java environment
-brew "jenv"
+# JQ clone focussed on correctness, speed, and simplicity
+brew "jaq"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Library for interacting with JSON
@@ -300,6 +300,8 @@ brew "reattach-to-user-namespace"
 brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
+# Intuitive find & replace CLI
+brew "sd"
 # Rust port of Shadowsocks
 brew "shadowsocks-rust"
 # Fast, configurable, shell plugin manager
@@ -346,8 +348,6 @@ brew "zip"
 brew "zoxide"
 # Tool for writing better scripts
 brew "zx"
-# Simple cli to manage Flutter SDK versions per project
-brew "leoafarias/fvm/fvm"
 # Modular developer CLI tool
 brew "modularml/packages/modular"
 # This package contains standard utilities for interacting with MongoDB.
@@ -436,8 +436,6 @@ cask "swiftdefaultappsprefpane"
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin@11"
 # Open-source code editor
 cask "visual-studio-code"
 # Remote desktop application focusing on security
@@ -507,11 +505,9 @@ vscode "github.copilot-workspace"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
-vscode "gitlab.gitlab-workflow"
 vscode "golang.go"
 vscode "goopware.raythis"
 vscode "graphql.vscode-graphql-syntax"
-vscode "gxl.git-graph-3"
 vscode "ibm.output-colorizer"
 vscode "idleberg.applescript"
 vscode "ionic.ionic"
@@ -521,6 +517,7 @@ vscode "letrieu.expand-region"
 vscode "lkrms.inifmt"
 vscode "maptz.camelcasenavigation"
 vscode "matthewpi.caddyfile-support"
+vscode "mhutchie.git-graph"
 vscode "mousavian.ssh-config-syntax-highlighter"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
@@ -555,7 +552,6 @@ vscode "usernamehw.errorlens"
 vscode "vadimcn.vscode-lldb"
 vscode "vercel.turbo-vsc"
 vscode "visualstudioexptteam.vscodeintellicode"
-vscode "visualstudioexptteam.vscodeintellicode-completions"
 vscode "vknabel.vscode-apple-swift-format"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yusoofsh.moonic"
