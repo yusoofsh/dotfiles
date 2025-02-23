@@ -14,10 +14,6 @@ shell = "zsh"
 
 [plugins]
 
-[plugins.pre]
-inline = """
-"""
-
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
@@ -28,20 +24,14 @@ github = "zsh-users/zsh-completions"
 github = "marlonrichert/zsh-autocomplete"
 hooks.pre = """
 zstyle '*:compinit' arguments -i -u -w
-zstyle ':autocomplete:*' delay 0.1
-zstyle ':autocomplete:*' widget-style menu-select
 """
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 hooks.pre = """
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 """
-
-[plugins.zsh-edit]
-github = "marlonrichert/zsh-edit"
 
 [plugins.ohmyzsh]
 github = "ohmyzsh/ohmyzsh"
@@ -74,14 +64,22 @@ github = "unixorn/fzf-zsh-plugin"
 [plugins.zsh-node-bin]
 github = "remcohaszing/zsh-node-bin"
 
+[plugins.zsh-edit]
+github = "marlonrichert/zsh-edit"
+
 [plugins.post]
 inline = """
+export WORDCHARS='~*?'
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+
 export ATUIN_NOBIND="true"
 source <(atuin init zsh)
 bindkey '^[[A' _atuin_search_widget
 bindkey '^[OA' _atuin_search_widget
 
-bindkey '\t' menu-select
 bindkey -M menuselect '\t' menu-complete
 bindkey -M menuselect '\r' .accept-line
 bindkey '\t' autosuggest-accept
