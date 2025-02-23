@@ -1,12 +1,12 @@
 encryption = "age"
 
-[git]
-autoCommit=true
-autoPush=true
-
 [age]
 recipient = "age1nk0w500lkwjcgqncxjphnypp0hrappjr9uvw9tqqqhdjdjqx5s3sck53cz"
 identity = "~/.config/chezmoi/chezmoikey.txt"
+
+[git]
+autoCommit=true
+autoPush=true
 
 [edit]
 command = "code"
@@ -14,5 +14,13 @@ args = [
   "--wait",
 ]
 
-[codespaces]
-dotfiles = "https://github.com/yusoofsh/dotfiles"
+[diff]
+command = "code"
+args = ["--wait", "--diff", "{{ .Destination }}", "{{ .Target }}"]
+
+[merge]
+command = "bash"
+args = [
+    "-c",
+    "cp {{ .Target }} {{ .Target }}.base && code --new-window --wait --merge {{ .Destination }} {{ .Target }} {{ .Target }}.base {{ .Source }}",
+]
